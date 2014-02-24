@@ -87,6 +87,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\modules\core\include\opencv2\core\affine.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\modules\core\include\opencv2\core\core.hpp">
       <Filter>Include</Filter>
     </ClInclude>
@@ -150,16 +153,16 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{93E9138F-9F73-4678-815E-20563253424B}</UniqueIdentifier>
+      <UniqueIdentifier>{FA415DE5-F074-468A-B401-2278C738427C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{539A9CAD-8170-406D-AFDB-6AC339E7600B}</UniqueIdentifier>
+      <UniqueIdentifier>{FDC6405D-E478-4B6E-9B91-49D7D9B88154}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src">
-      <UniqueIdentifier>{B5310900-2485-4286-B980-8CDC3570DA32}</UniqueIdentifier>
+      <UniqueIdentifier>{ECEE163F-CAE9-404C-A083-F5D7BFF859C5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Include">
-      <UniqueIdentifier>{BA5C8E39-E031-4F7F-8538-39E3666E92C6}</UniqueIdentifier>
+      <UniqueIdentifier>{BA652019-4E9A-481B-9BF5-420A78EAD8A8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

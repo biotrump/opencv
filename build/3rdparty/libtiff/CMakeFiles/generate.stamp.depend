@@ -1,5 +1,13 @@
 # CMake generation dependency list for this directory.
-D:/repos/openCV/2.4.x/3rdparty/libtiff/CMakeLists.txt
+D:/repos/openCV/work/3rdparty/libtiff/CMakeLists.txt
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckFunctionExists.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.cmake
-D:/repos/openCV/2.4.x/3rdparty/libtiff/tif_config.h.cmakein
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckFunctionExists.c
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckFunctionExists.c
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+D:/repos/openCV/work/3rdparty/libtiff/tif_config.h.cmakein

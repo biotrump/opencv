@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}</ProjectGUID>
+    <ProjectGUID>{CA8BD7D1-2D16-4EAF-969F-4DCC98BA92B3}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -40,7 +40,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/build/modules/videostab;D:/repos/openCV/2.4.x/modules/videostab/src;D:/repos/openCV/2.4.x/modules/videostab/include;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/gpu/include;D:/repos/openCV/work/modules/photo/include;D:/repos/openCV/work/modules/objdetect/include;D:/repos/openCV/work/modules/legacy/include;D:/repos/openCV/work/modules/video/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/modules/calib3d/include;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/build/modules/videostab;D:/repos/openCV/work/modules/videostab/src;D:/repos/openCV/work/modules/videostab/include;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -50,7 +50,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/build/modules/videostab;D:/repos/openCV/2.4.x/modules/videostab/src;D:/repos/openCV/2.4.x/modules/videostab/include;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/gpu/include;D:/repos/openCV/work/modules/photo/include;D:/repos/openCV/work/modules/objdetect/include;D:/repos/openCV/work/modules/legacy/include;D:/repos/openCV/work/modules/video/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/modules/calib3d/include;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/build/modules/videostab;D:/repos/openCV/work/modules/videostab/src;D:/repos/openCV/work/modules/videostab/include;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -60,9 +60,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\modules\videostab\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/videostab/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/work/modules/videostab/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\videostab\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\videostab\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -70,11 +70,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/videostab/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\videostab\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\videostab\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\videostab\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/videostab/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/modules/videostab/CMakeLists.txt;D:\repos\openCV\work\modules\videostab\CMakeLists.txt;D:\repos\openCV\work\modules\videostab\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\videostab\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/work/modules/videostab/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\videostab\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\videostab\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -82,12 +82,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/videostab/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\videostab\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\videostab\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\videostab\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/modules/videostab/CMakeLists.txt;D:\repos\openCV\work\modules\videostab\CMakeLists.txt;D:\repos\openCV\work\modules\videostab\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\videostab\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\CMakeFiles\ad2a035276ead6842a593fa9705cae1a\ALL_BUILD.rule">
+    <CustomBuild Include="..\..\CMakeFiles\2668f7d5c7e3e6467945083f7d5515f1\ALL_BUILD.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build all projects</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -96,8 +96,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/ad2a035276ead6842a593fa9705cae1a/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\videostab\CMakeFiles\ALL_BUILD</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/build/CMakeFiles/2668f7d5c7e3e6467945083f7d5515f1/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\videostab\CMakeFiles\ALL_BUILD</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build all projects</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 :cmEnd
@@ -106,16 +106,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/ad2a035276ead6842a593fa9705cae1a/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\videostab\CMakeFiles\ALL_BUILD</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/build/CMakeFiles/2668f7d5c7e3e6467945083f7d5515f1/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\videostab\CMakeFiles\ALL_BUILD</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <None Include="CMakeFiles\ALL_BUILD" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/videostab/opencv_videostab.vcxproj">
-      <Project>0CF0F43E-C631-42D5-8DAD-3E322CD476B3</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/videostab/opencv_videostab.vcxproj">
+      <Project>16C6D974-9A01-442D-A21C-AAB97506D5CE</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

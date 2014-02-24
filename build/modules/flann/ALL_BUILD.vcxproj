@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}</ProjectGUID>
+    <ProjectGUID>{CA8BD7D1-2D16-4EAF-969F-4DCC98BA92B3}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -40,7 +40,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/flann/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/build/modules/flann;D:/repos/openCV/2.4.x/modules/flann/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/flann/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/build/modules/flann;D:/repos/openCV/work/modules/flann/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -50,7 +50,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/flann/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/build/modules/flann;D:/repos/openCV/2.4.x/modules/flann/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/flann/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/build/modules/flann;D:/repos/openCV/work/modules/flann/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -60,9 +60,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\modules\flann\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/flann/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/work/modules/flann/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\flann\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\flann\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -70,11 +70,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/flann/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\flann\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\flann\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\flann\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/flann/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/modules/flann/CMakeLists.txt;D:\repos\openCV\work\modules\flann\CMakeLists.txt;D:\repos\openCV\work\modules\flann\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\flann\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/work/modules/flann/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\flann\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\flann\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -82,12 +82,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/flann/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\flann\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\flann\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\flann\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/modules/flann/CMakeLists.txt;D:\repos\openCV\work\modules\flann\CMakeLists.txt;D:\repos\openCV\work\modules\flann\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\flann\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\CMakeFiles\09ddbe6c5da18f1decc0047c556a83dc\ALL_BUILD.rule">
+    <CustomBuild Include="..\..\CMakeFiles\e9104e619c7928f4de28fb48e8ad1e13\ALL_BUILD.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build all projects</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -96,8 +96,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/09ddbe6c5da18f1decc0047c556a83dc/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\flann\CMakeFiles\ALL_BUILD</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/build/CMakeFiles/e9104e619c7928f4de28fb48e8ad1e13/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\flann\CMakeFiles\ALL_BUILD</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build all projects</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 :cmEnd
@@ -106,19 +106,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/09ddbe6c5da18f1decc0047c556a83dc/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\flann\CMakeFiles\ALL_BUILD</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/build/CMakeFiles/e9104e619c7928f4de28fb48e8ad1e13/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\flann\CMakeFiles\ALL_BUILD</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <None Include="CMakeFiles\ALL_BUILD" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/flann/opencv_flann.vcxproj">
-      <Project>D5AF2CE4-6104-4B3F-8D84-AAD68F8FF83F</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/flann/opencv_flann.vcxproj">
+      <Project>AB48DE55-C375-4E63-8819-A90A857230A3</Project>
     </ProjectReference>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/flann/opencv_test_flann.vcxproj">
-      <Project>C36764AC-4F0A-424B-A617-537B934C3DA3</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/flann/opencv_test_flann.vcxproj">
+      <Project>44587FE4-9A8D-4BBD-8E1E-875AD806F3E0</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

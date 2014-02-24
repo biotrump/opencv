@@ -2,11 +2,11 @@
 # File that provides "make uninstall" target
 #  We use the file 'install_manifest.txt'
 # -----------------------------------------------
-IF(NOT EXISTS "D:/repos/openCV/2.4.x/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"D:/repos/openCV/2.4.x/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "D:/repos/openCV/2.4.x/build/install_manifest.txt")
+IF(NOT EXISTS "D:/repos/openCV/work/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"D:/repos/openCV/work/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "D:/repos/openCV/work/build/install_manifest.txt")
 
-FILE(READ "D:/repos/openCV/2.4.x/build/install_manifest.txt" files)
+FILE(READ "D:/repos/openCV/work/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

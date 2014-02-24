@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CustomBuild Include="..\..\..\modules\ocl\CMakeLists.txt" />
-    <CustomBuild Include="..\..\CMakeFiles\e4625ff9356a8915627fa3d0a26b5468\ALL_BUILD.rule">
+    <CustomBuild Include="..\..\CMakeFiles\066958e0615c428015cdc1952b429fd5\ALL_BUILD.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -11,7 +11,7 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{63597A4E-D9C5-4DAC-BFB3-A0DF810DD2D7}</UniqueIdentifier>
+      <UniqueIdentifier>{3A3CF218-B45D-4562-AEC8-B36B03C798A7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

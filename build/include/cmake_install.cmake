@@ -1,8 +1,8 @@
-# Install script for directory: D:/repos/openCV/2.4.x/include
+# Install script for directory: D:/repos/openCV/work/include
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/2.4.x/build/install")
+  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/work/build/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,23 +27,23 @@ IF(NOT CMAKE_INSTALL_COMPONENT)
   ENDIF(COMPONENT)
 ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv" TYPE FILE FILES
-    "D:/repos/openCV/2.4.x/include/opencv/cv.h"
-    "D:/repos/openCV/2.4.x/include/opencv/cv.hpp"
-    "D:/repos/openCV/2.4.x/include/opencv/cvaux.h"
-    "D:/repos/openCV/2.4.x/include/opencv/cvaux.hpp"
-    "D:/repos/openCV/2.4.x/include/opencv/cvwimage.h"
-    "D:/repos/openCV/2.4.x/include/opencv/cxcore.h"
-    "D:/repos/openCV/2.4.x/include/opencv/cxcore.hpp"
-    "D:/repos/openCV/2.4.x/include/opencv/cxeigen.hpp"
-    "D:/repos/openCV/2.4.x/include/opencv/cxmisc.h"
-    "D:/repos/openCV/2.4.x/include/opencv/highgui.h"
-    "D:/repos/openCV/2.4.x/include/opencv/ml.h"
+    "D:/repos/openCV/work/include/opencv/cv.h"
+    "D:/repos/openCV/work/include/opencv/cv.hpp"
+    "D:/repos/openCV/work/include/opencv/cvaux.h"
+    "D:/repos/openCV/work/include/opencv/cvaux.hpp"
+    "D:/repos/openCV/work/include/opencv/cvwimage.h"
+    "D:/repos/openCV/work/include/opencv/cxcore.h"
+    "D:/repos/openCV/work/include/opencv/cxcore.hpp"
+    "D:/repos/openCV/work/include/opencv/cxeigen.hpp"
+    "D:/repos/openCV/work/include/opencv/cxmisc.h"
+    "D:/repos/openCV/work/include/opencv/highgui.h"
+    "D:/repos/openCV/work/include/opencv/ml.h"
     )
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "D:/repos/openCV/2.4.x/include/opencv2/opencv.hpp")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "D:/repos/openCV/work/include/opencv2/opencv.hpp")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 

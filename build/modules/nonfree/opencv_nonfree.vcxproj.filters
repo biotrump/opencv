@@ -10,10 +10,10 @@
     <ClCompile Include="..\..\..\modules\nonfree\src\surf.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\nonfree\src\surf.ocl.cpp">
+    <ClCompile Include="..\..\..\modules\nonfree\src\surf_gpu.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\nonfree\src\surf_gpu.cpp">
+    <ClCompile Include="..\..\..\modules\nonfree\src\surf_ocl.cpp">
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="opencl_kernels.cpp">
@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\modules\nonfree\CMakeLists.txt" />
-    <CustomBuild Include="..\..\CMakeFiles\8e443b0cda476c7d5c9fc0e01335b0c3\opencl_kernels.cpp.rule">
+    <CustomBuild Include="..\..\CMakeFiles\fc60d5befb462b73a6854e3fd280d2ae\opencl_kernels.cpp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -63,22 +63,22 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{93E9138F-9F73-4678-815E-20563253424B}</UniqueIdentifier>
+      <UniqueIdentifier>{FA415DE5-F074-468A-B401-2278C738427C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{539A9CAD-8170-406D-AFDB-6AC339E7600B}</UniqueIdentifier>
+      <UniqueIdentifier>{FDC6405D-E478-4B6E-9B91-49D7D9B88154}</UniqueIdentifier>
     </Filter>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{63597A4E-D9C5-4DAC-BFB3-A0DF810DD2D7}</UniqueIdentifier>
+      <UniqueIdentifier>{3A3CF218-B45D-4562-AEC8-B36B03C798A7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src">
-      <UniqueIdentifier>{B5310900-2485-4286-B980-8CDC3570DA32}</UniqueIdentifier>
+      <UniqueIdentifier>{ECEE163F-CAE9-404C-A083-F5D7BFF859C5}</UniqueIdentifier>
     </Filter>
     <Filter Include="OpenCL">
-      <UniqueIdentifier>{2F33944C-176D-416A-B254-FFC0B0EED9AA}</UniqueIdentifier>
+      <UniqueIdentifier>{E069CA14-5C98-4350-815B-A5310DCE6AE6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Include">
-      <UniqueIdentifier>{BA5C8E39-E031-4F7F-8538-39E3666E92C6}</UniqueIdentifier>
+      <UniqueIdentifier>{BA652019-4E9A-481B-9BF5-420A78EAD8A8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

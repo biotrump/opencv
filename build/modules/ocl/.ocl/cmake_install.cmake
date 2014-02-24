@@ -1,8 +1,8 @@
-# Install script for directory: D:/repos/openCV/2.4.x/modules/ocl
+# Install script for directory: D:/repos/openCV/work/modules/ocl
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/2.4.x/build/install")
+  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/work/build/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

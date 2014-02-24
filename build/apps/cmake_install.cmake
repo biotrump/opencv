@@ -1,8 +1,8 @@
-# Install script for directory: D:/repos/openCV/2.4.x/apps
+# Install script for directory: D:/repos/openCV/work/apps
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/2.4.x/build/install")
+  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/work/build/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,8 +29,8 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("D:/repos/openCV/2.4.x/build/apps/haartraining/cmake_install.cmake")
-  INCLUDE("D:/repos/openCV/2.4.x/build/apps/traincascade/cmake_install.cmake")
+  INCLUDE("D:/repos/openCV/work/build/apps/haartraining/cmake_install.cmake")
+  INCLUDE("D:/repos/openCV/work/build/apps/traincascade/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

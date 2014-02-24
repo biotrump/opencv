@@ -1730,11 +1730,11 @@ const struct ProgramEntry arithm_pow={"arithm_pow",
 "int src_index = mad24(y, src_step, x + src_offset);\n"
 "int dst_index = mad24(y, dst_step, x + dst_offset);\n"
 "VT src_data = src[src_index];\n"
-"VT tmp = src_data > 0 ? exp(p * log(src_data)) : (src_data == 0 ? 0 : exp(p * log(fabs(src_data))));\n"
+"VT tmp = src_data > (VT)0 ? (VT)exp(p * log(src_data)) : (src_data == (VT)0 ? (VT)0 : (VT)exp(p * log(fabs(src_data))));\n"
 "dst[dst_index] = tmp;\n"
 "}\n"
 "}\n"
-, "e425b09cf3bff82227b2097b3e5921af"};
+, "a79b90c5a25fec8fe4d5af644308c7c5"};
 const struct ProgramEntry arithm_setidentity={"arithm_setidentity",
 "#ifdef DOUBLE_SUPPORT\n"
 "#ifdef cl_amd_fp64\n"
@@ -9588,10 +9588,10 @@ const struct ProgramEntry imgproc_resize={"imgproc_resize",
 "float sy = ((dy+0.5f) * ify - 0.5f);\n"
 "int y = floor(sy);\n"
 "float v = sy - y;\n"
-"u = x < 0 ? 0 : u;\n"
-"u = (x >= src_cols) ? 0 : u;\n"
-"x = x < 0 ? 0 : x;\n"
-"x = (x >= src_cols) ? src_cols-1 : x;\n"
+"u = x < (int4)0 ? (float4)0 : u;\n"
+"u = (x >= (int4)src_cols) ? (float4)0 : u;\n"
+"x = x < (int4)0 ? (int4)0 : x;\n"
+"x = (x >= (int4)src_cols) ? (int4)(src_cols-1) : x;\n"
 "y<0 ? y=0,v=0 : y;\n"
 "y>=src_rows ? y=src_rows-1,v=0 : y;\n"
 "int4 U, U1;\n"
@@ -9856,7 +9856,7 @@ const struct ProgramEntry imgproc_resize={"imgproc_resize",
 "}\n"
 "#endif\n"
 "#endif\n"
-, "6fe4c313c4df937d1a60c04ef8154d56"};
+, "dce4e0232bb7fd3e374f363a5311e3cc"};
 const struct ProgramEntry imgproc_sobel3={"imgproc_sobel3",
 "#ifdef BORDER_CONSTANT\n"
 "#define EXTRAPOLATE(x, maxV)\n"

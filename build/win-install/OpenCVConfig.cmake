@@ -59,7 +59,7 @@ set(OpenCV_USE_NVCUVID  )
 set(OpenCV_ANDROID_NATIVE_API_LEVEL 0)
 
 # Some additional settings are required if OpenCV is built as static libs
-set(OpenCV_SHARED OFF)
+set(OpenCV_SHARED ON)
 
 # Enables mangled install paths, that help with side by side installs
 set(OpenCV_USE_MANGLED_PATHS FALSE)
@@ -116,7 +116,7 @@ SET(OpenCV_VERSION_TWEAK  0)
 # Link libraries: e.g. opencv_core;opencv_imgproc; etc...
 # ====================================================================
 
-SET(OpenCV_LIB_COMPONENTS opencv_core;opencv_flann;opencv_imgproc;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ml;opencv_video;opencv_legacy;opencv_objdetect;opencv_photo;opencv_gpu;opencv_videostab;opencv_ts;opencv_ocl;opencv_superres;opencv_nonfree;opencv_stitching;opencv_contrib)
+SET(OpenCV_LIB_COMPONENTS opencv_videostab;opencv_video;opencv_ts;opencv_superres;opencv_stitching;opencv_photo;opencv_ocl;opencv_objdetect;opencv_nonfree;opencv_ml;opencv_legacy;opencv_imgproc;opencv_highgui;opencv_gpu;opencv_flann;opencv_features2d;opencv_core;opencv_contrib;opencv_calib3d)
 
 # ==============================================================
 #  Extra include directories, needed by OpenCV 2 new structure

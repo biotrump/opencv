@@ -1,8 +1,8 @@
-# Install script for directory: D:/repos/openCV/2.4.x/apps/traincascade
+# Install script for directory: D:/repos/openCV/work/apps/traincascade
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/2.4.x/build/install")
+  SET(CMAKE_INSTALL_PREFIX "D:/repos/openCV/work/build/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,11 +27,11 @@ IF(NOT CMAKE_INSTALL_COMPONENT)
   ENDIF(COMPONENT)
 ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   IF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc10/bin" TYPE EXECUTABLE FILES "D:/repos/openCV/2.4.x/build/bin/Debug/opencv_traincascaded.exe")
+    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc10/bin" TYPE EXECUTABLE FILES "D:/repos/openCV/work/build/bin/Debug/opencv_traincascaded.exe")
   ELSEIF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc10/bin" TYPE EXECUTABLE FILES "D:/repos/openCV/2.4.x/build/bin/Release/opencv_traincascade.exe")
+    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc10/bin" TYPE EXECUTABLE FILES "D:/repos/openCV/work/build/bin/Release/opencv_traincascade.exe")
   ENDIF()
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 

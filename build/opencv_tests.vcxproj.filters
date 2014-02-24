@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CustomBuild Include="..\CMakeLists.txt" />
-    <CustomBuild Include="CMakeFiles\05039dd139ce8442b0e8ef9e285d362e\opencv_tests.rule">
+    <CustomBuild Include="CMakeFiles\891668cb03155a650ade5aa076ef9ab8\opencv_tests.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -11,7 +11,7 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{63597A4E-D9C5-4DAC-BFB3-A0DF810DD2D7}</UniqueIdentifier>
+      <UniqueIdentifier>{3A3CF218-B45D-4562-AEC8-B36B03C798A7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

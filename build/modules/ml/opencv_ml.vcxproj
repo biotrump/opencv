@@ -11,19 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{8CC60512-DFD3-4100-8790-68C1B6245E8E}</ProjectGUID>
+    <ProjectGUID>{10F9E6CE-1846-4914-B550-8D94E4C40B48}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>opencv_ml</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -35,93 +35,123 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\lib\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\bin\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_ml.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_ml248d</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\lib\Release\</OutDir>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\bin\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_ml.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_ml248</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/ml/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/build/modules/ml;D:/repos/openCV/2.4.x/modules/ml/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/ml/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/build/modules/ml;D:/repos/openCV/work/modules/ml/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4251</DisableSpecificWarnings>
       <ExceptionHandling>Async</ExceptionHandling>
-      <ForcedIncludeFiles>D:/repos/openCV/2.4.x/modules/ml/src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles>D:/repos/openCV/work/modules/ml/src/precomp.hpp</ForcedIncludeFiles>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>D:/repos/openCV/2.4.x/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderFile>D:/repos/openCV/work/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SuppressStartupBanner></SuppressStartupBanner>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/ml/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/build/modules/ml;D:/repos/openCV/2.4.x/modules/ml/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/ml/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/build/modules/ml;D:/repos/openCV/work/modules/ml/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/ml/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/build/modules/ml;D:/repos/openCV/2.4.x/modules/ml/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/ml/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/build/modules/ml;D:/repos/openCV/work/modules/ml/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Debug\opencv_core248d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/repos/openCV/work/build/lib/Debug/opencv_ml248d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/repos/openCV/work/build/bin/Debug/opencv_ml248d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/ml/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/build/modules/ml;D:/repos/openCV/2.4.x/modules/ml/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/ml/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/build/modules/ml;D:/repos/openCV/work/modules/ml/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4251</DisableSpecificWarnings>
       <ExceptionHandling>Async</ExceptionHandling>
-      <ForcedIncludeFiles>D:/repos/openCV/2.4.x/modules/ml/src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles>D:/repos/openCV/work/modules/ml/src/precomp.hpp</ForcedIncludeFiles>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>D:/repos/openCV/2.4.x/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderFile>D:/repos/openCV/work/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SuppressStartupBanner></SuppressStartupBanner>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/ml/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/build/modules/ml;D:/repos/openCV/2.4.x/modules/ml/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/ml/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/build/modules/ml;D:/repos/openCV/work/modules/ml/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/ml/test;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/build/modules/ml;D:/repos/openCV/2.4.x/modules/ml/src;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/ml/test;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/build/modules/ml;D:/repos/openCV/work/modules/ml/src;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Release\opencv_core248.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/repos/openCV/work/build/lib/Release/opencv_ml248.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/repos/openCV/work/build/bin/Release/opencv_ml248.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\modules\ml\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/ml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/work/modules/ml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\ml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\ml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,11 +159,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/ml/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\ml\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\ml\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/ml/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/modules/ml/CMakeLists.txt;D:\repos\openCV\work\modules\ml\CMakeLists.txt;D:\repos\openCV\work\modules\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\ml\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/work/modules/ml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\ml\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\ml\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -141,8 +171,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/ml/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\ml\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\ml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/modules/ml/CMakeLists.txt;D:\repos\openCV\work\modules\ml\CMakeLists.txt;D:\repos\openCV\work\modules\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\ml\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -168,20 +198,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\modules\ml\src\tree.cpp"  />
     <ClCompile Include="opencv_ml_pch.cpp" >
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/modules/ml/src/precomp.hpp</PrecompiledHeaderFile>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/ZERO_CHECK.vcxproj">
-      <Project>1C6E5FF8-510C-46A2-ACBE-4F77EA338C33</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/ZERO_CHECK.vcxproj">
+      <Project>CC31E343-90FF-462E-B6E0-547E7248B32B</Project>
     </ProjectReference>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/core/opencv_core.vcxproj">
-      <Project>934EC314-3B80-4B84-9536-07BD4AAA6264</Project>
-    </ProjectReference>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/zlib/zlib.vcxproj">
-      <Project>E545C1DD-9591-47EB-AAC1-A9F373AC4661</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/core/opencv_core.vcxproj">
+      <Project>3A7F84A7-F962-444A-8BB0-4C6A86E524F1</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

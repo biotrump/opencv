@@ -594,10 +594,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Include">
-      <UniqueIdentifier>{BA5C8E39-E031-4F7F-8538-39E3666E92C6}</UniqueIdentifier>
+      <UniqueIdentifier>{BA652019-4E9A-481B-9BF5-420A78EAD8A8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src">
-      <UniqueIdentifier>{B5310900-2485-4286-B980-8CDC3570DA32}</UniqueIdentifier>
+      <UniqueIdentifier>{ECEE163F-CAE9-404C-A083-F5D7BFF859C5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

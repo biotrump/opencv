@@ -59,7 +59,7 @@ set(OpenCV_USE_NVCUVID  )
 set(OpenCV_ANDROID_NATIVE_API_LEVEL 0)
 
 # Some additional settings are required if OpenCV is built as static libs
-set(OpenCV_SHARED OFF)
+set(OpenCV_SHARED ON)
 
 # Enables mangled install paths, that help with side by side installs
 set(OpenCV_USE_MANGLED_PATHS FALSE)
@@ -89,7 +89,7 @@ set(OpenCV_HAVE_ANDROID_CAMERA OFF)
 # ======================================================
 
 # Provide the include directories to the caller
-set(OpenCV_INCLUDE_DIRS "D:/repos/openCV/2.4.x/build" "D:/repos/openCV/2.4.x/include" "D:/repos/openCV/2.4.x/include/opencv")
+set(OpenCV_INCLUDE_DIRS "D:/repos/openCV/work/build" "D:/repos/openCV/work/include" "D:/repos/openCV/work/include/opencv")
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # ======================================================
@@ -116,12 +116,12 @@ SET(OpenCV_VERSION_TWEAK  0)
 # Link libraries: e.g. opencv_core;opencv_imgproc; etc...
 # ====================================================================
 
-SET(OpenCV_LIB_COMPONENTS opencv_core;opencv_flann;opencv_imgproc;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ml;opencv_video;opencv_legacy;opencv_objdetect;opencv_photo;opencv_gpu;opencv_videostab;opencv_ts;opencv_ocl;opencv_superres;opencv_nonfree;opencv_stitching;opencv_contrib)
+SET(OpenCV_LIB_COMPONENTS opencv_videostab;opencv_video;opencv_ts;opencv_superres;opencv_stitching;opencv_photo;opencv_ocl;opencv_objdetect;opencv_nonfree;opencv_ml;opencv_legacy;opencv_imgproc;opencv_highgui;opencv_gpu;opencv_flann;opencv_features2d;opencv_core;opencv_contrib;opencv_calib3d)
 
 # ==============================================================
 #  Extra include directories, needed by OpenCV 2 new structure
 # ==============================================================
-SET(OpenCV2_INCLUDE_DIRS D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/ocl/include;D:/repos/openCV/2.4.x/modules/nonfree/include;D:/repos/openCV/2.4.x/modules/contrib/include;D:/repos/openCV/2.4.x/modules/stitching/include;D:/repos/openCV/2.4.x/modules/superres/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/videostab/include)
+SET(OpenCV2_INCLUDE_DIRS D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/calib3d/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/modules/video/include;D:/repos/openCV/work/modules/legacy/include;D:/repos/openCV/work/modules/objdetect/include;D:/repos/openCV/work/modules/photo/include;D:/repos/openCV/work/modules/gpu/include;D:/repos/openCV/work/modules/ocl/include;D:/repos/openCV/work/modules/nonfree/include;D:/repos/openCV/work/modules/contrib/include;D:/repos/openCV/work/modules/stitching/include;D:/repos/openCV/work/modules/superres/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/videostab/include)
 if(OpenCV2_INCLUDE_DIRS)
   include_directories(${OpenCV2_INCLUDE_DIRS})
   list(APPEND OpenCV_INCLUDE_DIRS ${OpenCV2_INCLUDE_DIRS})

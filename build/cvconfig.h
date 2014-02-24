@@ -1,5 +1,5 @@
 /* OpenCV compiled as static or dynamic libs */
-/* #undef BUILD_SHARED_LIBS */
+#define BUILD_SHARED_LIBS
 
 /* Compile for 'real' NVIDIA GPU architectures */
 #define CUDA_ARCH_BIN ""
@@ -161,6 +161,6 @@
 /* Xine video library */
 /* #undef HAVE_XINE */
 
-/* Define to 1 if your processor stores words with the most significant byte
+/* Define if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */
 /* #undef WORDS_BIGENDIAN */

@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}</ProjectGUID>
+    <ProjectGUID>{CA8BD7D1-2D16-4EAF-969F-4DCC98BA92B3}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -40,7 +40,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/gpu/perf;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/gpu/include;D:/repos/openCV/work/modules/photo/include;D:/repos/openCV/work/modules/objdetect/include;D:/repos/openCV/work/modules/legacy/include;D:/repos/openCV/work/modules/video/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/modules/calib3d/include;D:/repos/openCV/work/build/modules/gpu;D:/repos/openCV/work/modules/gpu/src;D:/repos/openCV/work/modules/gpu/test;D:/repos/openCV/work/modules/gpu/src/cuda;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -50,7 +50,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/repos/openCV/work/modules/gpu/perf;D:/repos/openCV/work/modules/features2d/include;D:/repos/openCV/work/modules/highgui/include;D:/repos/openCV/work/modules/imgproc/include;D:/repos/openCV/work/modules/flann/include;D:/repos/openCV/work/modules/core/include;D:/repos/openCV/work/modules/ts/include;D:/repos/openCV/work/modules/gpu/include;D:/repos/openCV/work/modules/photo/include;D:/repos/openCV/work/modules/objdetect/include;D:/repos/openCV/work/modules/legacy/include;D:/repos/openCV/work/modules/video/include;D:/repos/openCV/work/modules/ml/include;D:/repos/openCV/work/modules/calib3d/include;D:/repos/openCV/work/build/modules/gpu;D:/repos/openCV/work/modules/gpu/src;D:/repos/openCV/work/modules/gpu/test;D:/repos/openCV/work/modules/gpu/src/cuda;D:/repos/openCV/work/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -60,9 +60,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\modules\gpu\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/work/modules/gpu/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\gpu\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -70,11 +70,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/modules/gpu/CMakeLists.txt;D:\repos\openCV\work\modules\gpu\CMakeLists.txt;D:\repos\openCV\work\modules\gpu\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\gpu\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/work/modules/gpu/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\work\build\modules\gpu\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -82,12 +82,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/modules/gpu/CMakeLists.txt;D:\repos\openCV\work\modules\gpu\CMakeLists.txt;D:\repos\openCV\work\modules\gpu\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\gpu\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\CMakeFiles\36eb8e97f752212ff5c670eaa2f5ce5f\ALL_BUILD.rule">
+    <CustomBuild Include="..\..\CMakeFiles\e2b556dda8df116fb2a7f1d4ad433dc4\ALL_BUILD.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build all projects</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -96,8 +96,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/36eb8e97f752212ff5c670eaa2f5ce5f/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\ALL_BUILD</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/work/build/CMakeFiles/e2b556dda8df116fb2a7f1d4ad433dc4/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\work\build\modules\gpu\CMakeFiles\ALL_BUILD</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build all projects</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 :cmEnd
@@ -106,22 +106,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/36eb8e97f752212ff5c670eaa2f5ce5f/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\ALL_BUILD</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/work/build/CMakeFiles/e2b556dda8df116fb2a7f1d4ad433dc4/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\work\build\modules\gpu\CMakeFiles\ALL_BUILD</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <None Include="CMakeFiles\ALL_BUILD" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/gpu/opencv_gpu.vcxproj">
-      <Project>244C119A-EF36-4B5E-9CBD-81CA22CFF875</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/gpu/opencv_gpu.vcxproj">
+      <Project>1744D67D-40DF-49B5-86C4-0B84764CD7DE</Project>
     </ProjectReference>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/gpu/opencv_perf_gpu.vcxproj">
-      <Project>9949B813-B97A-43BB-B58C-07329E744036</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/gpu/opencv_perf_gpu.vcxproj">
+      <Project>818D1DA2-1543-4C4E-8DFC-2F80079C2DDF</Project>
     </ProjectReference>
-    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/gpu/opencv_test_gpu.vcxproj">
-      <Project>733C76FA-874D-4851-8AF7-679BFD278772</Project>
+    <ProjectReference Include="D:/repos/openCV/work/build/modules/gpu/opencv_test_gpu.vcxproj">
+      <Project>98CD3D10-6785-468A-B243-5711379ADF4D</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
