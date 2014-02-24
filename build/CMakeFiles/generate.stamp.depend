@@ -1,0 +1,76 @@
+# CMake generation dependency list for this directory.
+D:/repos/openCV/2.4.x/CMakeLists.txt
+D:/repos/openCV/2.4.x/build/CMakeFiles/2.8.12.1/CMakeSystem.cmake
+D:/repos/openCV/2.4.x/build/CMakeFiles/2.8.12.1/CMakeCXXCompiler.cmake
+D:/repos/openCV/2.4.x/build/CMakeFiles/2.8.12.1/CMakeCCompiler.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+D:/repos/openCV/2.4.x/build/CMakeFiles/2.8.12.1/CMakeRCCompiler.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVUtils.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVDetectCXXCompiler.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVLegacyOptions.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVVersion.cmake
+D:/repos/openCV/2.4.x/modules/core/include/opencv2/core/version.hpp
+D:/repos/openCV/2.4.x/cmake/OpenCVCompilerOptions.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVCRTLinkage.cmake
+D:/repos/openCV/2.4.x/cmake/checks/winrttest.cpp
+D:/repos/openCV/2.4.x/cmake/OpenCVPCHSupport.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVModule.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVFindLibsGrfmt.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVFindLibsGUI.cmake
+D:/repos/openCV/2.4.x/cmake/checks/win32uitest.cpp
+D:/repos/openCV/2.4.x/cmake/OpenCVFindLibsVideo.cmake
+D:/repos/openCV/2.4.x/cmake/checks/vfwtest.cpp
+D:/repos/openCV/2.4.x/3rdparty/ffmpeg/ffmpeg_version.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVFindLibsPerf.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVDetectCUDA.cmake
+D:/repos/openCV/2.4.x/cmake/FindCUDA.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVFindLATEX.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVDetectPython.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPythonInterp.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPythonLibs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeFindFrameworks.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/SelectLibraryConfigurations.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVDetectApacheAnt.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindJNI.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVDetectOpenCL.cmake
+D:/repos/openCV/2.4.x/cmake/checks/opencl.cpp
+D:/repos/openCV/2.4.x/cmake/OpenCVExtraTargets.cmake
+D:/repos/openCV/2.4.x/cmake/templates/cmake_uninstall.cmake.in
+D:/repos/openCV/2.4.x/cmake/OpenCVGenHeaders.cmake
+D:/repos/openCV/2.4.x/cmake/templates/cvconfig.h.in
+D:/repos/openCV/2.4.x/cmake/templates/opencv_modules.hpp.in
+D:/repos/openCV/2.4.x/cmake/OpenCVGenPkgconfig.cmake
+D:/repos/openCV/2.4.x/cmake/templates/opencv-XXX.pc.in
+D:/repos/openCV/2.4.x/cmake/OpenCVGenAndroidMK.cmake
+D:/repos/openCV/2.4.x/cmake/OpenCVGenConfig.cmake
+D:/repos/openCV/2.4.x/cmake/templates/OpenCVConfig.cmake.in
+D:/repos/openCV/2.4.x/cmake/templates/OpenCVConfig-version.cmake.in
+D:/repos/openCV/2.4.x/cmake/templates/OpenCVConfig.cmake.in
+D:/repos/openCV/2.4.x/cmake/templates/OpenCVConfig-version.cmake.in
+D:/repos/openCV/2.4.x/cmake/templates/OpenCVConfig.cmake.in
+D:/repos/openCV/2.4.x/cmake/templates/OpenCVConfig-version.cmake.in
+D:/repos/openCV/2.4.x/cmake/OpenCVGenInfoPlist.cmake

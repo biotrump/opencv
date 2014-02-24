@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/contrib/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/nonfree/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/contrib/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/nonfree/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\samples\c\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/2.4.x/samples/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\samples\c\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/samples/c/CMakeLists.txt;D:\repos\openCV\2.4.x\samples\c\CMakeLists.txt;D:\repos\openCV\2.4.x\samples\c\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\samples\c\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/2.4.x/samples/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\samples\c\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/samples/c/CMakeLists.txt;D:\repos\openCV\2.4.x\samples\c\CMakeLists.txt;D:\repos\openCV\2.4.x\samples\c\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\samples\c\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\60d27dd31bc4bea3a102a71f3cf8ae40\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/60d27dd31bc4bea3a102a71f3cf8ae40/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\samples\c\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/build/CMakeFiles/60d27dd31bc4bea3a102a71f3cf8ae40/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\samples\c\CMakeFiles\ALL_BUILD</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_adaptiveskindetector.vcxproj">
+      <Project>91139987-8DAF-426A-8E34-533229041A15</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_bgfg_codebook.vcxproj">
+      <Project>303FBCB1-31C6-4C74-9E7C-42BFEEEF8E95</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_blobtrack_sample.vcxproj">
+      <Project>E216BC12-D4A4-4DAA-B279-656D4A454E15</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_contours.vcxproj">
+      <Project>DA340250-DE8D-4D48-9079-CC7C10C76335</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_convert_cascade.vcxproj">
+      <Project>B82CB749-6FCC-4832-92BA-352519F0B3E4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_delaunay.vcxproj">
+      <Project>E1C0EE3C-0651-4F66-9DCA-4C6E8805CCCB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_facedetect.vcxproj">
+      <Project>CC051013-5DFE-4961-9DEA-0A222436FAA8</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_fback_c.vcxproj">
+      <Project>F7AD8AEB-EED7-4AE2-8B3E-FFC78DBE7D03</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_find_obj.vcxproj">
+      <Project>FDED79BB-797B-4D88-8953-B1A591C76AAD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_find_obj_calonder.vcxproj">
+      <Project>DEE907E7-2EE4-458C-8D93-00207CF57B16</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_find_obj_ferns.vcxproj">
+      <Project>C7190817-2482-4A2E-B273-F5710B632BFB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_latentsvmdetect.vcxproj">
+      <Project>095C10AF-C58E-4538-954C-45BEC7FF52D7</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_morphology.vcxproj">
+      <Project>F944C4D0-B4B8-4846-A30A-44FA514E2985</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_motempl.vcxproj">
+      <Project>D56322CE-B28E-4D96-80B4-611876928F64</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_mser_sample.vcxproj">
+      <Project>834BA6EE-4F6D-4137-9C3D-85BD787F544E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_mushroom.vcxproj">
+      <Project>003FF9BC-A734-43D1-BC1A-BFA1A0721041</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_one_way_sample.vcxproj">
+      <Project>33CC5249-CADC-41B6-83CA-4EDDE6121856</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_polar_transforms.vcxproj">
+      <Project>15B746EF-2EB1-478D-8B4C-21AB75104B26</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_pyramid_segmentation.vcxproj">
+      <Project>9B96B772-70F9-4C0B-8064-F60E1B120DBD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_smiledetect.vcxproj">
+      <Project>FCAB8A65-E230-42BF-B5E6-A768E1CD75FB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/samples/c/example_tree_engine.vcxproj">
+      <Project>E205C037-73B1-4747-9B84-5CBC38C67C21</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

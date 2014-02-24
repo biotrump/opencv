@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{244C119A-EF36-4B5E-9CBD-81CA22CFF875}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_gpu</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\lib\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_gpu.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_gpu248d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\lib\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_gpu.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_gpu248</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>D:/repos/openCV/2.4.x/modules/gpu/src/precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/repos/openCV/2.4.x/modules/gpu/src/precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner></SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>D:/repos/openCV/2.4.x/modules/gpu/src/precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/repos/openCV/2.4.x/modules/gpu/src/precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner></SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/repos/openCV/2.4.x/modules/gpu/perf;D:/repos/openCV/2.4.x/modules/features2d/include;D:/repos/openCV/2.4.x/modules/highgui/include;D:/repos/openCV/2.4.x/modules/imgproc/include;D:/repos/openCV/2.4.x/modules/flann/include;D:/repos/openCV/2.4.x/modules/core/include;D:/repos/openCV/2.4.x/modules/ts/include;D:/repos/openCV/2.4.x/modules/gpu/include;D:/repos/openCV/2.4.x/modules/photo/include;D:/repos/openCV/2.4.x/modules/objdetect/include;D:/repos/openCV/2.4.x/modules/legacy/include;D:/repos/openCV/2.4.x/modules/video/include;D:/repos/openCV/2.4.x/modules/ml/include;D:/repos/openCV/2.4.x/modules/calib3d/include;D:/repos/openCV/2.4.x/build/modules/gpu;D:/repos/openCV/2.4.x/modules/gpu/src;D:/repos/openCV/2.4.x/modules/gpu/test;D:/repos/openCV/2.4.x/modules/gpu/src/cuda;D:/repos/openCV/2.4.x/build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\modules\gpu\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -H../../.. -B../.. --check-stamp-file D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/gpu/CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;D:\repos\openCV\2.4.x\modules\gpu\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\repos\openCV\2.4.x\build\modules\gpu\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\devmem2d.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\gpu.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\gpumat.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\stream_accessor.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\block.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\border_interpolate.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\color.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\common.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\datamov_utils.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\dynamic_smem.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\emulation.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\filters.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\funcattrib.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\functional.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\limits.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\reduce.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\saturate_cast.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\scan.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\simd_functions.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\static_check.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\transform.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\type_traits.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\utility.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\vec_distance.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\vec_math.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\vec_traits.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\warp.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\warp_reduce.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\warp_shuffle.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\color_detail.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\reduce.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\reduce_key_val.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\transform_detail.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\type_traits_detail.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\vec_distance_detail.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\precomp.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuvid_video_source.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cu_safe_call.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cvt_color_internal.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\ffmpeg_video_source.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\frame_queue.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\thread_wrappers.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\video_decoder.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\video_parser.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\fgd_bgfg_common.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\internal_shared.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\lbp.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\safe_call.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\texture_binder.hpp" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\column_filter.h" />
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\row_filter.h" />
+    <ClInclude Include="..\..\cvconfig.h" />
+    <ClInclude Include="..\..\opencv2\opencv_modules.hpp" />
+    <ClCompile Include="..\..\..\modules\gpu\src\arithm.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\bgfg_gmg.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\bgfg_mog.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\bilateral_filter.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\blend.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\brute_force_matcher.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\calib3d.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\cascadeclassifier.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\color.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\cudastream.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\cuvid_video_source.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\cu_safe_call.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\denoising.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\element_operations.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\error.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\fast.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\ffmpeg_video_source.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\fgd_bgfg.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\filtering.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\frame_queue.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\gftt.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\global_motion.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\graphcuts.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\hog.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\hough.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\imgproc.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\match_template.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\matrix_operations.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\matrix_reductions.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\mssegmentation.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\optflowbm.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\optical_flow.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\optical_flow_farneback.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\orb.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\precomp.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\pyramids.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\pyrlk.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\remap.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\resize.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\speckle_filtering.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\split_merge.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\stereobm.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\stereobp.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\stereocsbp.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\thread_wrappers.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\tvl1flow.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\video_decoder.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\video_parser.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\video_reader.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\video_writer.cpp"  />
+    <ClCompile Include="..\..\..\modules\gpu\src\warp.cpp"  />
+    <ClCompile Include="opencv_gpu_pch.cpp" >
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/repos/openCV/2.4.x/modules/gpu/src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/repos/openCV/2.4.x/modules/gpu/src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/openexr/IlmImf.vcxproj">
+      <Project>E1D88CD0-28D6-454A-82B8-EEE9961838EE</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/ZERO_CHECK.vcxproj">
+      <Project>1C6E5FF8-510C-46A2-ACBE-4F77EA338C33</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/libjasper/libjasper.vcxproj">
+      <Project>B34EF350-99F1-4F78-B257-057799C7DF1E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/libjpeg/libjpeg.vcxproj">
+      <Project>404CF49D-41B2-4383-B6EE-3C82A4AD4B4D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/libpng/libpng.vcxproj">
+      <Project>A917F454-5309-4015-8A42-D72B7727A5EB</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/libtiff/libtiff.vcxproj">
+      <Project>46D87AEC-1EAF-44D2-8D2B-2E498D52E6E9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/calib3d/opencv_calib3d.vcxproj">
+      <Project>B4684F94-4CB8-4D63-9BB5-071C50CD1C57</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/core/opencv_core.vcxproj">
+      <Project>934EC314-3B80-4B84-9536-07BD4AAA6264</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/features2d/opencv_features2d.vcxproj">
+      <Project>C976ED50-13BC-4231-AC72-EBE27EDF0FFC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/flann/opencv_flann.vcxproj">
+      <Project>D5AF2CE4-6104-4B3F-8D84-AAD68F8FF83F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/highgui/opencv_highgui.vcxproj">
+      <Project>92767FB8-9649-4F09-94E5-396490249E42</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/imgproc/opencv_imgproc.vcxproj">
+      <Project>A55628BE-66A7-46FE-96AA-093BAF37D81F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/legacy/opencv_legacy.vcxproj">
+      <Project>52AA55E0-4731-4F7A-B84D-BB7513ABDC24</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/ml/opencv_ml.vcxproj">
+      <Project>8CC60512-DFD3-4100-8790-68C1B6245E8E</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/objdetect/opencv_objdetect.vcxproj">
+      <Project>782682D4-9149-4C90-B65C-5E88987F434F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/photo/opencv_photo.vcxproj">
+      <Project>5117E201-1CE4-4149-A4A7-889AACFAADFA</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/modules/video/opencv_video.vcxproj">
+      <Project>79EF189C-1309-4EF8-AB51-F1F72C07D9A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/repos/openCV/2.4.x/build/3rdparty/zlib/zlib.vcxproj">
+      <Project>E545C1DD-9591-47EB-AAC1-A9F373AC4661</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

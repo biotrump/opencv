@@ -83,8 +83,10 @@ int main( int argc, char** argv ) {
 
     // DETECTION
     // Any openCV detector such as
-    SurfFeatureDetector detector(2000,4);
-
+    //SurfFeatureDetector detector(2000,4);
+	//SiftFeatureDetector detector;
+	OrbFeatureDetector detector(400);
+	//FastFeatureDetector detector(10);
     // DESCRIPTOR
     // Our proposed FREAK descriptor
     // (roation invariance, scale invariance, pattern radius corresponding to SMALLEST_KP_SIZE,

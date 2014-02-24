@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\gpu\src\arithm.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\bgfg_gmg.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\bgfg_mog.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\bilateral_filter.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\blend.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\brute_force_matcher.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\calib3d.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\cascadeclassifier.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\color.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\cudastream.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\cuvid_video_source.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\cu_safe_call.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\denoising.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\element_operations.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\error.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\fast.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\ffmpeg_video_source.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\fgd_bgfg.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\filtering.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\frame_queue.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\gftt.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\global_motion.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\graphcuts.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\hog.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\hough.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\imgproc.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\match_template.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\matrix_operations.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\matrix_reductions.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\mssegmentation.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\optflowbm.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\optical_flow.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\optical_flow_farneback.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\orb.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\precomp.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\pyramids.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\pyrlk.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\remap.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\resize.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\speckle_filtering.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\split_merge.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\stereobm.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\stereobp.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\stereocsbp.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\thread_wrappers.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\tvl1flow.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\video_decoder.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\video_parser.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\video_reader.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\video_writer.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\gpu\src\warp.cpp">
+      <Filter>Src\Host</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_gpu_pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\devmem2d.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\gpu.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\gpumat.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\stream_accessor.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\block.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\border_interpolate.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\color.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\common.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\datamov_utils.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\dynamic_smem.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\emulation.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\filters.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\funcattrib.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\functional.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\limits.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\reduce.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\saturate_cast.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\scan.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\simd_functions.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\static_check.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\transform.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\type_traits.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\utility.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\vec_distance.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\vec_math.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\vec_traits.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\warp.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\warp_reduce.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\warp_shuffle.hpp">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\color_detail.hpp">
+      <Filter>Device\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\reduce.hpp">
+      <Filter>Device\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\reduce_key_val.hpp">
+      <Filter>Device\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\transform_detail.hpp">
+      <Filter>Device\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\type_traits_detail.hpp">
+      <Filter>Device\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\include\opencv2\gpu\device\detail\vec_distance_detail.hpp">
+      <Filter>Device\Detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\precomp.hpp">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuvid_video_source.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cu_safe_call.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cvt_color_internal.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\ffmpeg_video_source.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\frame_queue.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\thread_wrappers.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\video_decoder.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\video_parser.h">
+      <Filter>Src\Host</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\fgd_bgfg_common.hpp">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\internal_shared.hpp">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\lbp.hpp">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\safe_call.hpp">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\texture_binder.hpp">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\column_filter.h">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\gpu\src\cuda\row_filter.h">
+      <Filter>Src\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cvconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opencv2\opencv_modules.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\modules\gpu\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Src\Host">
+      <UniqueIdentifier>{E4A60105-4C55-4768-9143-377105AE1826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cuda">
+      <UniqueIdentifier>{DFB5C129-4E4E-40B0-A290-1CBF3C307AB2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{93E9138F-9F73-4678-815E-20563253424B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{539A9CAD-8170-406D-AFDB-6AC339E7600B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{BA5C8E39-E031-4F7F-8538-39E3666E92C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{B5310900-2485-4286-B980-8CDC3570DA32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device">
+      <UniqueIdentifier>{02413267-6BCC-48D2-97BC-9FD0034D5A6E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Detail">
+      <UniqueIdentifier>{13221E29-10FB-49F2-A3FF-DE7CA98000CF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

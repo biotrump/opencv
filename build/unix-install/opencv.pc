@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=D:/repos/openCV/2.4.x/build/install
+exec_prefix=${prefix}
+libdir=
+includedir_old=${prefix}/include/opencv
+includedir_new=${prefix}/include
+
+Name: OpenCV
+Description: Open Source Computer Vision Library
+Version: 2.4.8
+Libs:  ${exec_prefix}/x64/vc10/staticlib/opencv_contrib248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_stitching248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_nonfree248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_superres248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_ocl248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_ts248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_videostab248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_gpu248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_photo248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_objdetect248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_legacy248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_video248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_ml248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_calib3d248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_features2d248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_highgui248.lib ${exec_prefix}/share/OpenCV/3rdparty/x64/vc10/staticlib/IlmImf.lib ${exec_prefix}/share/OpenCV/3rdparty/x64/vc10/staticlib/libjasper.lib ${exec_prefix}/share/OpenCV/3rdparty/x64/vc10/staticlib/libtiff.lib ${exec_prefix}/share/OpenCV/3rdparty/x64/vc10/staticlib/libpng.lib ${exec_prefix}/share/OpenCV/3rdparty/x64/vc10/staticlib/libjpeg.lib ${exec_prefix}/x64/vc10/staticlib/opencv_imgproc248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_flann248.lib ${exec_prefix}/x64/vc10/staticlib/opencv_core248.lib ${exec_prefix}/share/OpenCV/3rdparty/x64/vc10/staticlib/zlib.lib -lvfw32 -lws2_32 -lsetupapi -lole32 -lgdi32 -lcomctl32
+Cflags: -I${includedir_old} -I${includedir_new}

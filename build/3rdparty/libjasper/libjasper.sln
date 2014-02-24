@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B34EF350-99F1-4F78-B257-057799C7DF1E} = {B34EF350-99F1-4F78-B257-057799C7DF1E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{D58DEA25-3439-429D-BEB2-1CA01C9238ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6} = {3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "..\..\ZERO_CHECK.vcxproj", "{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libjasper", "libjasper.vcxproj", "{B34EF350-99F1-4F78-B257-057799C7DF1E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33} = {1C6E5FF8-510C-46A2-ACBE-4F77EA338C33}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdparty", "3rdparty", "{C7F3BBF2-2F5A-4299-97A0-73CA21E9A26E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMakeTargets", "CMakeTargets", "{8C101042-B4D4-49FC-852F-8F3A9FF4D257}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}.Debug|x64.ActiveCfg = Debug|x64
+		{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}.Debug|x64.Build.0 = Debug|x64
+		{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}.Release|x64.ActiveCfg = Release|x64
+		{3F4B607F-5BF0-4E63-9510-CDDE2CF3C6A6}.Release|x64.Build.0 = Release|x64
+		{D58DEA25-3439-429D-BEB2-1CA01C9238ED}.Debug|x64.ActiveCfg = Debug|x64
+		{D58DEA25-3439-429D-BEB2-1CA01C9238ED}.Release|x64.ActiveCfg = Release|x64
+		{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33}.Debug|x64.ActiveCfg = Debug|x64
+		{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33}.Debug|x64.Build.0 = Debug|x64
+		{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33}.Release|x64.ActiveCfg = Release|x64
+		{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33}.Release|x64.Build.0 = Release|x64
+		{B34EF350-99F1-4F78-B257-057799C7DF1E}.Debug|x64.ActiveCfg = Debug|x64
+		{B34EF350-99F1-4F78-B257-057799C7DF1E}.Debug|x64.Build.0 = Debug|x64
+		{B34EF350-99F1-4F78-B257-057799C7DF1E}.Release|x64.ActiveCfg = Release|x64
+		{B34EF350-99F1-4F78-B257-057799C7DF1E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B34EF350-99F1-4F78-B257-057799C7DF1E} = {C7F3BBF2-2F5A-4299-97A0-73CA21E9A26E}
+		{D58DEA25-3439-429D-BEB2-1CA01C9238ED} = {8C101042-B4D4-49FC-852F-8F3A9FF4D257}
+		{1C6E5FF8-510C-46A2-ACBE-4F77EA338C33} = {8C101042-B4D4-49FC-852F-8F3A9FF4D257}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
