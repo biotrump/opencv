@@ -1,0 +1,2 @@
+/home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar cr ../../lib/armeabi-v7a/libopencv_cudabgsegm.a  CMakeFiles/opencv_cudabgsegm.dir/src/mog2.cpp.o CMakeFiles/opencv_cudabgsegm.dir/src/fgd.cpp.o CMakeFiles/opencv_cudabgsegm.dir/src/gmg.cpp.o CMakeFiles/opencv_cudabgsegm.dir/src/mog.cpp.o
+/home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib ../../lib/armeabi-v7a/libopencv_cudabgsegm.a
