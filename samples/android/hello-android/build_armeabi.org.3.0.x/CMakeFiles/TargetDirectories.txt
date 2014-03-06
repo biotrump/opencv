@@ -1,0 +1,1 @@
+/home/thomas/build/misc/openCV/work/samples/android/hello-android/build_armeabi/CMakeFiles/hello-android.dir
