@@ -712,6 +712,7 @@ list( REMOVE_DUPLICATES __uniqToolchainArchNames )
 list( SORT __uniqToolchainArchNames )
 foreach( __arch ${__uniqToolchainArchNames} )
  list( APPEND ANDROID_SUPPORTED_ABIS ${ANDROID_SUPPORTED_ABIS_${__arch}} )
+ list( APPEND ANDROID_SUPPORTED_ABIS " " )
 endforeach()
 unset( __uniqToolchainArchNames )
 if( NOT ANDROID_SUPPORTED_ABIS )
@@ -1390,6 +1391,16 @@ if( ARMEABI_V7A )
 endif()
 
 if( ANDROID_NO_UNDEFINED )
+# message( STATUS ">>>WITH_OPENMP" ${WITH_OPENMP} " )
+# message( STATUS ">>>HAVE_OPENMP" ${HAVE_OPENMP} " )
+#openmp
+#http://recursify.com/blog/2013/08/09/openmp-on-android
+#LOCAL_LDFLAGS += -fopenmp
+ set( WITH_OPENMP BOOL ON)
+ if ( WITH_OPENMP )
+ set( ANDROID_LINKER_FLAGS "${ANDROID_LINKER_FLAGS} -fopenmp" )
+ endif()
+ 
  if( MIPS )
   # there is some sysroot-related problem in mips linker...
   if( NOT ANDROID_SYSROOT MATCHES "[ ;\"]" )
@@ -1422,6 +1433,7 @@ if( ANDROID_COMPILER_VERSION VERSION_EQUAL "4.6" )
  endif()
 endif() # version 4.6
 
+ 
 if( ANDROID_NOEXECSTACK )
  if( ANDROID_COMPILER_IS_CLANG )
   set( ANDROID_CXX_FLAGS    "${ANDROID_CXX_FLAGS} -Xclang -mnoexecstack" )

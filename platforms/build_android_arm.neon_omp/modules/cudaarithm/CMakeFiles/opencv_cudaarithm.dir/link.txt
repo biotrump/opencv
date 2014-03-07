@@ -1,0 +1,2 @@
+/home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar cr ../../lib/armeabi-v7a/libopencv_cudaarithm.a  CMakeFiles/opencv_cudaarithm.dir/src/reductions.cpp.o CMakeFiles/opencv_cudaarithm.dir/src/element_operations.cpp.o CMakeFiles/opencv_cudaarithm.dir/src/arithm.cpp.o CMakeFiles/opencv_cudaarithm.dir/src/core.cpp.o
+/home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib ../../lib/armeabi-v7a/libopencv_cudaarithm.a

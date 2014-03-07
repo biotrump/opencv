@@ -1,0 +1,317 @@
+-- >>>    Android ABI:
+-- >>>    Android SUPPORTED ABI:armeabi-v7aarmeabiarmeabi-v7a with NEONarmeabi-v7a with VFPV3armeabi-v6 with VFPmipsx86
+-- >>>    OBSOLETE_ARM_TARGET:
+-- >>>    OBSOLETE_ARM_TARGETS:
+-- ---    Android ABI:armeabi-v7a
+-- ---    OBSOLETE_ARM_TARGET:
+-- ---    OBSOLETE_ARM_TARGETS:
+-- ---    VALUES:
+-- +++    Android ABI:armeabi-v7a
+-- Detected version of GNU GCC: 48 (408)
+-- Performing Test HAVE_CXX_FSIGNED_CHAR
+-- Performing Test HAVE_CXX_FSIGNED_CHAR - Success
+-- Performing Test HAVE_C_FSIGNED_CHAR
+-- Performing Test HAVE_C_FSIGNED_CHAR - Success
+-- Performing Test HAVE_CXX_W
+-- Performing Test HAVE_CXX_W - Success
+-- Performing Test HAVE_C_W
+-- Performing Test HAVE_C_W - Success
+-- Performing Test HAVE_CXX_WALL
+-- Performing Test HAVE_CXX_WALL - Success
+-- Performing Test HAVE_C_WALL
+-- Performing Test HAVE_C_WALL - Success
+-- Performing Test HAVE_CXX_WERROR_RETURN_TYPE
+-- Performing Test HAVE_CXX_WERROR_RETURN_TYPE - Success
+-- Performing Test HAVE_C_WERROR_RETURN_TYPE
+-- Performing Test HAVE_C_WERROR_RETURN_TYPE - Success
+-- Performing Test HAVE_CXX_WERROR_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_CXX_WERROR_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_C_WERROR_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_C_WERROR_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_CXX_WERROR_ADDRESS
+-- Performing Test HAVE_CXX_WERROR_ADDRESS - Success
+-- Performing Test HAVE_C_WERROR_ADDRESS
+-- Performing Test HAVE_C_WERROR_ADDRESS - Success
+-- Performing Test HAVE_CXX_WERROR_SEQUENCE_POINT
+-- Performing Test HAVE_CXX_WERROR_SEQUENCE_POINT - Success
+-- Performing Test HAVE_C_WERROR_SEQUENCE_POINT
+-- Performing Test HAVE_C_WERROR_SEQUENCE_POINT - Success
+-- Performing Test HAVE_CXX_WFORMAT
+-- Performing Test HAVE_CXX_WFORMAT - Success
+-- Performing Test HAVE_C_WFORMAT
+-- Performing Test HAVE_C_WFORMAT - Success
+-- Performing Test HAVE_CXX_WERROR_FORMAT_SECURITY
+-- Performing Test HAVE_CXX_WERROR_FORMAT_SECURITY - Success
+-- Performing Test HAVE_C_WERROR_FORMAT_SECURITY
+-- Performing Test HAVE_C_WERROR_FORMAT_SECURITY - Success
+-- Performing Test HAVE_CXX_WMISSING_DECLARATIONS
+-- Performing Test HAVE_CXX_WMISSING_DECLARATIONS - Success
+-- Performing Test HAVE_C_WMISSING_DECLARATIONS
+-- Performing Test HAVE_C_WMISSING_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_WMISSING_PROTOTYPES
+-- Performing Test HAVE_CXX_WMISSING_PROTOTYPES - Failed
+-- Performing Test HAVE_C_WMISSING_PROTOTYPES
+-- Performing Test HAVE_C_WMISSING_PROTOTYPES - Success
+-- Performing Test HAVE_CXX_WSTRICT_PROTOTYPES
+-- Performing Test HAVE_CXX_WSTRICT_PROTOTYPES - Failed
+-- Performing Test HAVE_C_WSTRICT_PROTOTYPES
+-- Performing Test HAVE_C_WSTRICT_PROTOTYPES - Success
+-- Performing Test HAVE_CXX_WUNDEF
+-- Performing Test HAVE_CXX_WUNDEF - Success
+-- Performing Test HAVE_C_WUNDEF
+-- Performing Test HAVE_C_WUNDEF - Success
+-- Performing Test HAVE_CXX_WINIT_SELF
+-- Performing Test HAVE_CXX_WINIT_SELF - Success
+-- Performing Test HAVE_C_WINIT_SELF
+-- Performing Test HAVE_C_WINIT_SELF - Success
+-- Performing Test HAVE_CXX_WPOINTER_ARITH
+-- Performing Test HAVE_CXX_WPOINTER_ARITH - Success
+-- Performing Test HAVE_C_WPOINTER_ARITH
+-- Performing Test HAVE_C_WPOINTER_ARITH - Success
+-- Performing Test HAVE_CXX_WSHADOW
+-- Performing Test HAVE_CXX_WSHADOW - Success
+-- Performing Test HAVE_C_WSHADOW
+-- Performing Test HAVE_C_WSHADOW - Success
+-- Performing Test HAVE_CXX_WSIGN_PROMO
+-- Performing Test HAVE_CXX_WSIGN_PROMO - Success
+-- Performing Test HAVE_C_WSIGN_PROMO
+-- Performing Test HAVE_C_WSIGN_PROMO - Failed
+-- Performing Test HAVE_CXX_WNO_NARROWING
+-- Performing Test HAVE_CXX_WNO_NARROWING - Success
+-- Performing Test HAVE_C_WNO_NARROWING
+-- Performing Test HAVE_C_WNO_NARROWING - Success
+-- Performing Test HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR - Failed
+-- Performing Test HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS
+-- Performing Test HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS - Failed
+-- Performing Test HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS
+-- Performing Test HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS - Failed
+-- Performing Test HAVE_CXX_FDIAGNOSTICS_SHOW_OPTION
+-- Performing Test HAVE_CXX_FDIAGNOSTICS_SHOW_OPTION - Success
+-- Performing Test HAVE_C_FDIAGNOSTICS_SHOW_OPTION
+-- Performing Test HAVE_C_FDIAGNOSTICS_SHOW_OPTION - Success
+-- Performing Test HAVE_CXX_FOMIT_FRAME_POINTER
+-- Performing Test HAVE_CXX_FOMIT_FRAME_POINTER - Success
+-- Performing Test HAVE_C_FOMIT_FRAME_POINTER
+-- Performing Test HAVE_C_FOMIT_FRAME_POINTER - Success
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_CXX_FVISIBILITY_INLINES_HIDDEN
+-- Performing Test HAVE_CXX_FVISIBILITY_INLINES_HIDDEN - Success
+-- Performing Test HAVE_C_FVISIBILITY_INLINES_HIDDEN
+-- Performing Test HAVE_C_FVISIBILITY_INLINES_HIDDEN - Failed
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- Found ZLIB: /home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm/usr/lib/libz.so (found suitable version "1.2.3", required is "1.2.3")
+-- Looking for assert.h
+-- Looking for assert.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for io.h
+-- Looking for io.h - not found
+-- Looking for jbg_newlen
+-- Looking for jbg_newlen - not found
+-- Looking for mmap
+-- Looking for mmap - found
+-- Looking for search.h
+-- Looking for search.h - not found
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_VARIABLE
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_VARIABLE - Success
+-- Performing Test HAVE_C_WNO_MISSING_PROTOTYPES
+-- Performing Test HAVE_C_WNO_MISSING_PROTOTYPES - Success
+-- Performing Test HAVE_C_WNO_MISSING_DECLARATIONS
+-- Performing Test HAVE_C_WNO_MISSING_DECLARATIONS - Success
+-- Performing Test HAVE_C_WNO_UNDEF
+-- Performing Test HAVE_C_WNO_UNDEF - Success
+-- Performing Test HAVE_C_WNO_UNUSED
+-- Performing Test HAVE_C_WNO_UNUSED - Success
+-- Performing Test HAVE_C_WNO_SIGN_COMPARE
+-- Performing Test HAVE_C_WNO_SIGN_COMPARE - Success
+-- Performing Test HAVE_C_WNO_CAST_ALIGN
+-- Performing Test HAVE_C_WNO_CAST_ALIGN - Success
+-- Performing Test HAVE_C_WNO_SHADOW
+-- Performing Test HAVE_C_WNO_SHADOW - Success
+-- Performing Test HAVE_C_WNO_MAYBE_UNINITIALIZED
+-- Performing Test HAVE_C_WNO_MAYBE_UNINITIALIZED - Success
+-- Performing Test HAVE_C_WNO_POINTER_TO_INT_CAST
+-- Performing Test HAVE_C_WNO_POINTER_TO_INT_CAST - Success
+-- Performing Test HAVE_C_WNO_INT_TO_POINTER_CAST
+-- Performing Test HAVE_C_WNO_INT_TO_POINTER_CAST - Success
+-- Performing Test HAVE_C_WNO_UNUSED_PARAMETER
+-- Performing Test HAVE_C_WNO_UNUSED_PARAMETER - Success
+-- Performing Test HAVE_CXX_WNO_MISSING_DECLARATIONS
+-- Performing Test HAVE_CXX_WNO_MISSING_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_WNO_UNUSED_PARAMETER
+-- Performing Test HAVE_CXX_WNO_UNUSED_PARAMETER - Success
+-- Performing Test HAVE_C_WNO_UNUSED_VARIABLE
+-- Performing Test HAVE_C_WNO_UNUSED_VARIABLE - Success
+-- Performing Test HAVE_C_WNO_IMPLICIT_FUNCTION_DECLARATION
+-- Performing Test HAVE_C_WNO_IMPLICIT_FUNCTION_DECLARATION - Success
+-- Performing Test HAVE_C_WNO_UNINITIALIZED
+-- Performing Test HAVE_C_WNO_UNINITIALIZED - Success
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_PARAMETER
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_PARAMETER - Success
+-- Performing Test HAVE_C_WNO_STRICT_OVERFLOW
+-- Performing Test HAVE_C_WNO_STRICT_OVERFLOW - Success
+-- Looking for semaphore.h
+-- Looking for semaphore.h - found
+-- Performing Test HAVE_CXX_WNO_SHADOW
+-- Performing Test HAVE_CXX_WNO_SHADOW - Success
+-- Performing Test HAVE_CXX_WNO_UNUSED
+-- Performing Test HAVE_CXX_WNO_UNUSED - Success
+-- Performing Test HAVE_CXX_WNO_SIGN_COMPARE
+-- Performing Test HAVE_CXX_WNO_SIGN_COMPARE - Success
+-- Performing Test HAVE_CXX_WNO_UNDEF
+-- Performing Test HAVE_CXX_WNO_UNDEF - Success
+-- Performing Test HAVE_CXX_WNO_UNINITIALIZED
+-- Performing Test HAVE_CXX_WNO_UNINITIALIZED - Success
+-- Performing Test HAVE_CXX_WNO_SWITCH
+-- Performing Test HAVE_CXX_WNO_SWITCH - Success
+-- Performing Test HAVE_CXX_WNO_PARENTHESES
+-- Performing Test HAVE_CXX_WNO_PARENTHESES - Success
+-- Performing Test HAVE_CXX_WNO_ARRAY_BOUNDS
+-- Performing Test HAVE_CXX_WNO_ARRAY_BOUNDS - Success
+-- Performing Test HAVE_CXX_WNO_EXTRA
+-- Performing Test HAVE_CXX_WNO_EXTRA - Success
+-- Try OpenMP C flag = [-fopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Success
+-- Try OpenMP CXX flag = [-fopenmp]
+-- Performing Test OpenMP_FLAG_DETECTED
+-- Performing Test OpenMP_FLAG_DETECTED - Success
+-- Found OpenMP: -fopenmp 
+-- Found PythonInterp: /usr/bin/python (found suitable version "2.7.3", required is "2.7")
+-- Found android tool: /home/thomas/build/adt-bundle-linux-x86_64-20130522/sdk/tools/android
+-- Could NOT find Matlab (missing:  MATLAB_MEX_SCRIPT MATLAB_INCLUDE_DIRS MATLAB_ROOT_DIR MATLAB_LIBRARIES MATLAB_LIBRARY_DIRS MATLAB_MEXEXT MATLAB_ARCH MATLAB_BIN) 
+-- Performing Test HAVE_CXX_WNO_MISSING_PROTOTYPES
+-- Performing Test HAVE_CXX_WNO_MISSING_PROTOTYPES - Failed
+-- Assume that non-module dependency is available: log (for module opencv_androidcamera)
+-- Assume that non-module dependency is available: dl (for module opencv_androidcamera)
+-- Assume that non-module dependency is available: z (for module opencv_core)
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_DECLARATIONS - Success
+-- 
+-- General configuration for OpenCV 3.0.0-dev =====================================
+--   Version control:               2.4.8-3484-g6d6f41c-dirty
+-- 
+--   Platform:
+--     Host:                        Linux 3.2.0-56-generic x86_64
+--     Target:                      Linux 1 armv7-a
+--     CMake:                       2.8.7
+--     CMake generator:             Unix Makefiles
+--     CMake build tool:            /usr/bin/make
+--     Configuration:               Release
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      NO
+--     C++ Compiler:                /home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++  (ver 4.8)
+--     C++ flags (Release):         -fexceptions -frtti -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -DNDEBUG
+--     C++ flags (Debug):           -fexceptions -frtti -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -marm -fno-omit-frame-pointer -fno-strict-aliasing -O0 -g -DDEBUG -D_DEBUG  -O0 -DDEBUG -D_DEBUG
+--     C Compiler:                  /home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+--     C flags (Release):           -fexceptions -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fopenmp -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -DNDEBUG
+--     C flags (Debug):             -fexceptions -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fopenmp -marm -fno-omit-frame-pointer -fno-strict-aliasing -O0 -g -DDEBUG -D_DEBUG  -O0 -DDEBUG -D_DEBUG
+--     Linker flags (Release):      -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now 
+--     Linker flags (Debug):        -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now 
+--     Precompiled headers:         YES
+-- 
+--   OpenCV modules:
+--     To be built:                 core androidcamera flann imgproc highgui features2d calib3d cudaarithm ml nonfree objdetect video contrib cudawarping cuda cudafilters cudaimgproc legacy cudabgsegm cudacodec cudafeatures2d cudaoptflow cudastereo optim photo shape softcascade stitching ts videostab
+--     Disabled:                    world
+--     Disabled by dependency:      -
+--     Unavailable:                 cudalegacy cudev java matlab python superres viz
+-- 
+--   Android: 
+--     Android ABI:                 armeabi-v7a
+--     STL type:                    gnustl_static
+--     Native API level:            android-8
+--     SDK target:                  android-17
+--     Android NDK:                 /home/thomas/build/android-ndk-r9d (toolchain: arm-linux-androideabi-4.8)
+--     android tool:                /home/thomas/build/adt-bundle-linux-x86_64-20130522/sdk/tools/android (Android SDK Tools, revision 22.0.1.)
+--     Google Play package:         NO
+--     Android examples:            NO
+-- 
+--   GUI: 
+--     GTK+ 2.x:                    NO
+--     GThread :                    NO
+--     GtkGlExt:                    NO
+--     OpenGL support:              NO
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        z (ver 1.2.3)
+--     JPEG:                        build (ver 90)
+--     WEBP:                        build (ver 0.3.1)
+--     PNG:                         build (ver 1.5.12)
+--     TIFF:                        build (ver 42 - 4.0.2)
+--     JPEG 2000:                   build (ver 1.900.1)
+--     OpenEXR:                     build (ver 1.7.1)
+-- 
+--   Video I/O:
+--     AndroidNativeCamera:         YES, use prebuilt libraries
+-- 
+--   Other third-party libraries:
+--     Use IPP:                     NO
+--     Use Eigen:                   NO
+--     Use TBB:                     NO
+--     Use OpenMP:                  YES
+--     Use GCD                      NO
+--     Use Concurrency              NO
+--     Use C=:                      NO
+--     Use Cuda:                    NO
+--     Use OpenCL:                  YES
+-- 
+--   OpenCL:
+--     Version:                     dynamic
+--     Include path:                /home/thomas/build/misc/openCV/work/3rdparty/include/opencl/1.2
+--     Use AMDFFT:                  NO
+--     Use AMDBLAS:                 NO
+-- 
+--   Python:
+--     Interpreter:                 /usr/bin/python (ver 2.7.3)
+-- 
+--   Java:
+--     ant:                         NO
+--     Java tests:                  NO
+-- 
+--   Matlab:
+--     mex:                         NO
+-- 
+--   Documentation:
+--     Build Documentation:         NO
+--     Sphinx:                      NO
+--     PdfLaTeX compiler:           /usr/bin/pdflatex
+--     PlantUML:                    NO
+-- 
+--   Tests and samples:
+--     Tests:                       YES
+--     Performance tests:           YES
+--     C/C++ Examples:              NO
+-- 
+--   Install path:                  /home/thomas/build/misc/openCV/work/platforms/build_android_arm/install
+-- 
+--   cvconfig.h is in:              /home/thomas/build/misc/openCV/work/platforms/build_android_arm
+-- -----------------------------------------------------------------
+-- 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/thomas/build/misc/openCV/work/platforms/build_android_arm

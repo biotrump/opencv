@@ -1,0 +1,110 @@
+-- Detected version of GNU GCC: 48 (408)
+-- Could NOT find Matlab (missing:  MATLAB_MEX_SCRIPT MATLAB_INCLUDE_DIRS MATLAB_ROOT_DIR MATLAB_LIBRARIES MATLAB_LIBRARY_DIRS MATLAB_MEXEXT MATLAB_ARCH MATLAB_BIN) 
+-- Assume that non-module dependency is available: log (for module opencv_androidcamera)
+-- Assume that non-module dependency is available: dl (for module opencv_androidcamera)
+-- Assume that non-module dependency is available: z (for module opencv_core)
+-- 
+-- General configuration for OpenCV 3.0.0-dev =====================================
+--   Version control:               2.4.8-3484-g6d6f41c-dirty
+-- 
+--   Platform:
+--     Host:                        Linux 3.2.0-56-generic x86_64
+--     Target:                      Linux 1 armv7-a
+--     CMake:                       2.8.7
+--     CMake generator:             Unix Makefiles
+--     CMake build tool:            /usr/bin/make
+--     Configuration:               Release
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      NO
+--     C++ Compiler:                /home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++  (ver 4.8)
+--     C++ flags (Release):         -fexceptions -frtti -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -DNDEBUG
+--     C++ flags (Debug):           -fexceptions -frtti -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -marm -fno-omit-frame-pointer -fno-strict-aliasing -O0 -g -DDEBUG -D_DEBUG  -O0 -DDEBUG -D_DEBUG
+--     C Compiler:                  /home/thomas/build/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+--     C flags (Release):           -fexceptions -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fopenmp -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -DNDEBUG
+--     C flags (Debug):             -fexceptions -Wno-psabi --sysroot=/home/thomas/build/android-ndk-r9d/platforms/android-8/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -fomit-frame-pointer -fvisibility=hidden -fopenmp -marm -fno-omit-frame-pointer -fno-strict-aliasing -O0 -g -DDEBUG -D_DEBUG  -O0 -DDEBUG -D_DEBUG
+--     Linker flags (Release):      -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now 
+--     Linker flags (Debug):        -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now 
+--     Precompiled headers:         YES
+-- 
+--   OpenCV modules:
+--     To be built:                 core androidcamera flann imgproc highgui features2d calib3d cudaarithm ml nonfree objdetect video contrib cudawarping cuda cudafilters cudaimgproc legacy cudabgsegm cudacodec cudafeatures2d cudaoptflow cudastereo optim photo shape softcascade stitching ts videostab
+--     Disabled:                    world
+--     Disabled by dependency:      -
+--     Unavailable:                 cudalegacy cudev java matlab python superres viz
+-- 
+--   Android: 
+--     Android ABI:                 armeabi-v7a
+--     STL type:                    gnustl_static
+--     Native API level:            android-8
+--     SDK target:                  android-17
+--     Android NDK:                 /home/thomas/build/android-ndk-r9d (toolchain: arm-linux-androideabi-4.8)
+--     android tool:                /home/thomas/build/adt-bundle-linux-x86_64-20130522/sdk/tools/android (Android SDK Tools, revision 22.0.1.)
+--     Google Play package:         NO
+--     Android examples:            NO
+-- 
+--   GUI: 
+--     GTK+ 2.x:                    NO
+--     GThread :                    NO
+--     GtkGlExt:                    NO
+--     OpenGL support:              NO
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        z (ver 1.2.3)
+--     JPEG:                        build (ver 90)
+--     WEBP:                        build (ver 0.3.1)
+--     PNG:                         build (ver 1.5.12)
+--     TIFF:                        build (ver 42 - 4.0.2)
+--     JPEG 2000:                   build (ver 1.900.1)
+--     OpenEXR:                     build (ver 1.7.1)
+-- 
+--   Video I/O:
+--     AndroidNativeCamera:         YES, use prebuilt libraries
+-- 
+--   Other third-party libraries:
+--     Use IPP:                     NO
+--     Use Eigen:                   NO
+--     Use TBB:                     NO
+--     Use OpenMP:                  YES
+--     Use GCD                      NO
+--     Use Concurrency              NO
+--     Use C=:                      NO
+--     Use Cuda:                    NO
+--     Use OpenCL:                  YES
+-- 
+--   OpenCL:
+--     Version:                     dynamic
+--     Include path:                /home/thomas/build/misc/openCV/work/3rdparty/include/opencl/1.2
+--     Use AMDFFT:                  NO
+--     Use AMDBLAS:                 NO
+-- 
+--   Python:
+--     Interpreter:                 /usr/bin/python (ver 2.7.3)
+-- 
+--   Java:
+--     ant:                         NO
+--     Java tests:                  NO
+-- 
+--   Matlab:
+--     mex:                         NO
+-- 
+--   Documentation:
+--     Build Documentation:         NO
+--     Sphinx:                      NO
+--     PdfLaTeX compiler:           /usr/bin/pdflatex
+--     PlantUML:                    NO
+-- 
+--   Tests and samples:
+--     Tests:                       YES
+--     Performance tests:           YES
+--     C/C++ Examples:              NO
+-- 
+--   Install path:                  /home/thomas/build/misc/openCV/work/platforms/build_android_arm/install
+-- 
+--   cvconfig.h is in:              /home/thomas/build/misc/openCV/work/platforms/build_android_arm
+-- -----------------------------------------------------------------
+-- 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/thomas/build/misc/openCV/work/platforms/build_android_arm

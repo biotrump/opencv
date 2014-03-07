@@ -37,6 +37,16 @@ FIND_PACKAGE( OpenCV REQUIRED )
 SET( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -pedantic" )
 SET( CMAKE_CPP_FLAGS "${CMAKE_CPP_FLAGS} -Wall -pedantic" )
 
+#http://recursify.com/blog/2013/08/09/openmp-on-android
+#LOCAL_LDFLAGS += -fopenmp
+
+set( ANDROID_LINKER_FLAGS "${ANDROID_LINKER_FLAGS} -fopenmp" )
+
+set( CMAKE_SHARED_LINKER_FLAGS "${ANDROID_LINKER_FLAGS} ${CMAKE_SHARED_LINKER_FLAGS}" )
+set( CMAKE_MODULE_LINKER_FLAGS "${ANDROID_LINKER_FLAGS} ${CMAKE_MODULE_LINKER_FLAGS}" )
+set( CMAKE_EXE_LINKER_FLAGS    "${ANDROID_LINKER_FLAGS} ${CMAKE_EXE_LINKER_FLAGS}" )
+
+
 #INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
 #INCLUDE_DIRECTORIES(BEFORE
 #	"${OpenCV_SOURCE_DIR}/include"
@@ -83,9 +93,6 @@ FILE( GLOB srcs "*.cpp" )
 
 ADD_EXECUTABLE( ${PROJECT_NAME} ${srcs} )
 TARGET_LINK_LIBRARIES( ${PROJECT_NAME} ${LIBRARY_DEPS} )
-
-#OCV_OPTION(WITH_OPENMP         "Include OpenMP support"                      ON)
-#status("    Use OpenMP:"     HAVE_OPENMP      THEN YES ELSE NO)
 
 #########################################################
 # Summary report
