@@ -141,7 +141,7 @@ OCV_OPTION(WITH_QT             "Build with Qt Backend support"               OFF
 OCV_OPTION(WITH_WIN32UI        "Build with Win32 UI Backend support"         ON   IF WIN32 )
 OCV_OPTION(WITH_QUICKTIME      "Use QuickTime for Video I/O insted of QTKit" OFF  IF APPLE )
 OCV_OPTION(WITH_TBB            "Include Intel TBB support"                   OFF  IF (NOT IOS) )
-OCV_OPTION(WITH_OPENMP         "Include OpenMP support"                      ON)
+OCV_OPTION(WITH_OPENMP         "Include OpenMP support"                      OFF)
 OCV_OPTION(WITH_CSTRIPES       "Include C= support"                          OFF  IF WIN32 )
 OCV_OPTION(WITH_TIFF           "Include TIFF support"                        ON   IF (NOT IOS) )
 OCV_OPTION(WITH_UNICAP         "Include Unicap support (GPL)"                OFF  IF (UNIX AND NOT APPLE AND NOT ANDROID) )
@@ -209,7 +209,7 @@ OCV_OPTION(ENABLE_SSSE3               "Enable SSSE3 instructions"               
 OCV_OPTION(ENABLE_SSE41               "Enable SSE4.1 instructions"                               OFF  IF ((CV_ICC OR CMAKE_COMPILER_IS_GNUCXX) AND (X86 OR X86_64)) )
 OCV_OPTION(ENABLE_SSE42               "Enable SSE4.2 instructions"                               OFF  IF (CMAKE_COMPILER_IS_GNUCXX AND (X86 OR X86_64)) )
 OCV_OPTION(ENABLE_AVX                 "Enable AVX instructions"                                  OFF  IF ((MSVC OR CMAKE_COMPILER_IS_GNUCXX) AND (X86 OR X86_64)) )
-OCV_OPTION(ENABLE_NEON                "Enable NEON instructions"                                 OFF  IF CMAKE_COMPILER_IS_GNUCXX AND ARM )
+OCV_OPTION(ENABLE_NEON                "Enable NEON instructions"                                 ON  IF CMAKE_COMPILER_IS_GNUCXX AND ARM )
 OCV_OPTION(ENABLE_VFPV3               "Enable VFPv3-D32 instructions"                            OFF  IF CMAKE_COMPILER_IS_GNUCXX AND ARM )
 OCV_OPTION(ENABLE_NOISY_WARNINGS      "Show all warnings even if they are too noisy"             OFF )
 OCV_OPTION(OPENCV_WARNINGS_ARE_ERRORS "Treat warnings as errors"                                 OFF )
@@ -370,7 +370,8 @@ endif()
 # ----------------------------------------------------------------------------
 # In case of Makefiles if the user does not setup CMAKE_BUILD_TYPE, assume it's Release:
 if(CMAKE_GENERATOR MATCHES "Makefiles|Ninja" AND "${CMAKE_BUILD_TYPE}" STREQUAL "")
-  set(CMAKE_BUILD_TYPE Release)
+#  set(CMAKE_BUILD_TYPE Release)
+   set(CMAKE_BUILD_TYPE Debug)
 endif()
 
 include(cmake/OpenCVCompilerOptions.cmake)

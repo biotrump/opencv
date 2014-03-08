@@ -1396,10 +1396,10 @@ if( ANDROID_NO_UNDEFINED )
 #openmp
 #http://recursify.com/blog/2013/08/09/openmp-on-android
 #LOCAL_LDFLAGS += -fopenmp
- set( WITH_OPENMP BOOL ON)
- if ( WITH_OPENMP )
- set( ANDROID_LINKER_FLAGS "${ANDROID_LINKER_FLAGS} -fopenmp" )
- endif()
+# set( WITH_OPENMP BOOL ON)
+# if ( WITH_OPENMP )
+# set( ANDROID_LINKER_FLAGS "${ANDROID_LINKER_FLAGS} -fopenmp" )
+# endif()
  
  if( MIPS )
   # there is some sysroot-related problem in mips linker...

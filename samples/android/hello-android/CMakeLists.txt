@@ -15,7 +15,7 @@ SET( PROJECT_NAME ${PROJECT_NAME} CACHE STRING "The name of your project")
 
 PROJECT( ${PROJECT_NAME} )
 
-SET( OpenCV_SOURCE_DIR /home/thomas/build/misc/openCV/work/)
+SET( OpenCV_SOURCE_DIR ${OPENCV_SRC})
 
 include("${OpenCV_SOURCE_DIR}/cmake/OpenCVUtils.cmake")
 
