@@ -2,7 +2,9 @@ SET (the_target native_camera_r${ANDROID_VERSION})
 
 project(${the_target})
 
-link_directories("${ANDROID_SOURCE_TREE}/out/target/product/generic/system/lib")
+#link_directories("${ANDROID_SOURCE_TREE}/out/target/product/generic/system/lib")
+#ANDROID_PRODUCT_OUT=/home/thomas/build/aosp/4.4.2_r2/out/target/product/hammerhead
+link_directories("${ANDROID_PRODUCT_OUT}/system/lib")
 
 if (ANDROID_VERSION VERSION_LESS "4.1")
     INCLUDE_DIRECTORIES(BEFORE
@@ -21,6 +23,7 @@ else()
     INCLUDE_DIRECTORIES(BEFORE
     ${ANDROID_SOURCE_TREE}
     ${ANDROID_SOURCE_TREE}/frameworks/native/include
+    ${ANDROID_SOURCE_TREE}/frameworks/native/opengl/include
     ${ANDROID_SOURCE_TREE}/frameworks/av/include
     ${ANDROID_SOURCE_TREE}/system/core/include
     ${ANDROID_SOURCE_TREE}/hardware/libhardware/include
