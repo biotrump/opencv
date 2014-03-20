@@ -30,7 +30,14 @@ public class CvNativeActivity extends Activity {
             }
         }
     };
-
+	
+	static {
+	    if (!OpenCVLoader.initDebug()) {
+	        // Handle initialization error
+	        Log.i(TAG, "OpenCV load not successfully");
+		    }
+	}
+	
     public CvNativeActivity() {
         Log.i(TAG, "Instantiated new " + this.getClass());
     }
@@ -39,6 +46,7 @@ public class CvNativeActivity extends Activity {
     public void onResume()
     {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        //OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
     }
 }

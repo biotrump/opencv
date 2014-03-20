@@ -39,7 +39,13 @@ public class ColorBlobDetectionActivity extends Activity implements OnTouchListe
     private Scalar               CONTOUR_COLOR;
 
     private CameraBridgeViewBase mOpenCvCameraView;
-
+	static {
+	    if (!OpenCVLoader.initDebug()) {
+	        // Handle initialization error
+	        Log.i(TAG, "OpenCV load not successfully");
+		    }
+	}
+	
     private BaseLoaderCallback  mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
@@ -88,7 +94,8 @@ public class ColorBlobDetectionActivity extends Activity implements OnTouchListe
     public void onResume()
     {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        //OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
     }
 
     public void onDestroy() {

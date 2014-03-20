@@ -40,6 +40,13 @@ public class CameraCalibrationActivity extends Activity implements CvCameraViewL
     private static final String TAG = "OCVSample::Activity";
 
     private CameraBridgeViewBase mOpenCvCameraView;
+	static {
+	    if (!OpenCVLoader.initDebug()) {
+	        // Handle initialization error
+	        Log.i(TAG, "OpenCV load not successfully");
+		    }
+	}
+	
     private CameraCalibrator mCalibrator;
     private OnCameraFrameRender mOnCameraFrameRender;
     private int mWidth;
@@ -92,7 +99,8 @@ public class CameraCalibrationActivity extends Activity implements CvCameraViewL
     public void onResume()
     {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_2, this, mLoaderCallback);
+        //OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_2, this, mLoaderCallback);
+        mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
     }
 
     public void onDestroy() {

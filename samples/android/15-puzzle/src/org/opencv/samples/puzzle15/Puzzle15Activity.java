@@ -50,7 +50,13 @@ public class Puzzle15Activity extends Activity implements CvCameraViewListener, 
             }
         }
     };
-
+	static {
+	    if (!OpenCVLoader.initDebug()) {
+	        // Handle initialization error
+	        Log.i(TAG, "OpenCV load not successfully");
+		    }
+	}
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +82,8 @@ public class Puzzle15Activity extends Activity implements CvCameraViewListener, 
     public void onResume()
     {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        //OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
     }
 
     public void onDestroy() {

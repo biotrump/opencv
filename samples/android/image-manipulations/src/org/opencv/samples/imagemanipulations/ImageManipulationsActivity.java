@@ -46,7 +46,12 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
     private MenuItem             mItemPreviewPixelize;
     private MenuItem             mItemPreviewPosterize;
     private CameraBridgeViewBase mOpenCvCameraView;
-
+	static {
+	    if (!OpenCVLoader.initDebug()) {
+	        // Handle initialization error
+	        Log.i(TAG, "OpenCV load not successfully");
+		    }
+	}
     private Size                 mSize0;
 
     private Mat                  mIntermediateMat;
@@ -111,7 +116,8 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
     public void onResume()
     {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        //OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_3, this, mLoaderCallback);
+        mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
     }
 
     public void onDestroy() {
