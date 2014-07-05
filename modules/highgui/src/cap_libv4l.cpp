@@ -158,12 +158,12 @@ the symptoms were damaged image and 'Corrupt JPEG data: premature end of data se
 
 11th patch: Apr 13, 2010, Filipe Almeida filipe.almeida@ist.utl.pt
 - Tries to setup all properties first through v4l2_ioctl call.
-- Allows seting up all Video4Linux properties through cvSetCaptureProperty instead of only CV_CAP_PROP_BRIGHTNESS, CV_CAP_PROP_CONTRAST, CV_CAP_PROP_SATURATION, CV_CAP_PROP_HUE, CV_CAP_PROP_GAIN and CV_CAP_PROP_EXPOSURE.
+- Allows setting up all Video4Linux properties through cvSetCaptureProperty instead of only CV_CAP_PROP_BRIGHTNESS, CV_CAP_PROP_CONTRAST, CV_CAP_PROP_SATURATION, CV_CAP_PROP_HUE, CV_CAP_PROP_GAIN and CV_CAP_PROP_EXPOSURE.
 
 12th patch: Apr 16, 2010, Filipe Almeida filipe.almeida@ist.utl.pt
 - CvCaptureCAM_V4L structure cleanup (no longer needs <PROPERTY>_{min,max,} variables)
 - Introduction of v4l2_ctrl_range - minimum and maximum allowed values for v4l controls
-- Allows seting up all Video4Linux properties through cvSetCaptureProperty using input values between 0.0 and 1.0
+- Allows setting up all Video4Linux properties through cvSetCaptureProperty using input values between 0.0 and 1.0
 - Gets v4l properties first through v4l2_ioctl call (ignores capture->is_v4l2_device)
 - cvGetCaptureProperty adjusted to support the changes
 - Returns device properties to initial values after device closes
@@ -321,7 +321,6 @@ typedef struct CvCaptureCAM_V4L
    struct v4l2_control control;
    enum v4l2_buf_type type;
    struct v4l2_queryctrl queryctrl;
-   struct v4l2_querymenu querymenu;
 
    /* V4L2 control variables */
    v4l2_ctrl_range** v4l2_ctrl_ranges;
@@ -491,25 +490,6 @@ static int try_init_v4l2(CvCaptureCAM_V4L* capture, char *deviceName)
 }
 
 
-static void v4l2_scan_controls_enumerate_menu(CvCaptureCAM_V4L* capture)
-{
-//  printf (" Menu items:\n");
-  CLEAR (capture->querymenu);
-  capture->querymenu.id = capture->queryctrl.id;
-  for (capture->querymenu.index = capture->queryctrl.minimum;
-       (int)capture->querymenu.index <= capture->queryctrl.maximum;
-       capture->querymenu.index++)
-  {
-    if (0 == xioctl (capture->deviceHandle, VIDIOC_QUERYMENU,
-                     &capture->querymenu))
-    {
-      //printf (" %s\n", capture->querymenu.name);
-    } else {
-        perror ("VIDIOC_QUERYMENU");
-    }
-  }
-}
-
 static void v4l2_free_ranges(CvCaptureCAM_V4L* capture) {
   int i;
   if (capture->v4l2_ctrl_ranges != NULL) {
@@ -590,9 +570,6 @@ static void v4l2_scan_controls(CvCaptureCAM_V4L* capture) {
       if(capture->queryctrl.flags & V4L2_CTRL_FLAG_DISABLED) {
         continue;
       }
-      if (capture->queryctrl.type == V4L2_CTRL_TYPE_MENU) {
-        v4l2_scan_controls_enumerate_menu(capture);
-      }
       if(capture->queryctrl.type != V4L2_CTRL_TYPE_INTEGER &&
          capture->queryctrl.type != V4L2_CTRL_TYPE_BOOLEAN &&
          capture->queryctrl.type != V4L2_CTRL_TYPE_MENU) {
@@ -612,9 +589,6 @@ static void v4l2_scan_controls(CvCaptureCAM_V4L* capture) {
       if(v4l2_ioctl(capture->deviceHandle, VIDIOC_QUERYCTRL, &capture->queryctrl) == 0) {
         if(capture->queryctrl.flags & V4L2_CTRL_FLAG_DISABLED) {
           continue;
-        }
-        if (capture->queryctrl.type == V4L2_CTRL_TYPE_MENU) {
-          v4l2_scan_controls_enumerate_menu(capture);
         }
         if(capture->queryctrl.type != V4L2_CTRL_TYPE_INTEGER &&
            capture->queryctrl.type != V4L2_CTRL_TYPE_BOOLEAN &&
@@ -637,9 +611,6 @@ static void v4l2_scan_controls(CvCaptureCAM_V4L* capture) {
           continue;
         }
 
-        if (capture->queryctrl.type == V4L2_CTRL_TYPE_MENU) {
-          v4l2_scan_controls_enumerate_menu(capture);
-        }
 
         if(capture->queryctrl.type != V4L2_CTRL_TYPE_INTEGER &&
            capture->queryctrl.type != V4L2_CTRL_TYPE_BOOLEAN &&

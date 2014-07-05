@@ -1746,7 +1746,7 @@ PERF_TEST_P(Image, ImgProc_HoughLinesP,
     const float rho = 1.0f;
     const float theta = static_cast<float>(CV_PI / 180.0);
     const int threshold = 100;
-    const int minLineLenght = 50;
+    const int minLineLength = 50;
     const int maxLineGap = 5;
 
     const cv::Mat image = cv::imread(fileName, cv::IMREAD_GRAYSCALE);
@@ -1761,7 +1761,7 @@ PERF_TEST_P(Image, ImgProc_HoughLinesP,
         cv::gpu::GpuMat d_lines;
         cv::gpu::HoughLinesBuf d_buf;
 
-        TEST_CYCLE() cv::gpu::HoughLinesP(d_mask, d_lines, d_buf, rho, theta, minLineLenght, maxLineGap);
+        TEST_CYCLE() cv::gpu::HoughLinesP(d_mask, d_lines, d_buf, rho, theta, minLineLength, maxLineGap);
 
         cv::Mat gpu_lines(d_lines);
         cv::Vec4i* begin = gpu_lines.ptr<cv::Vec4i>();
@@ -1773,7 +1773,7 @@ PERF_TEST_P(Image, ImgProc_HoughLinesP,
     {
         std::vector<cv::Vec4i> cpu_lines;
 
-        TEST_CYCLE() cv::HoughLinesP(mask, cpu_lines, rho, theta, threshold, minLineLenght, maxLineGap);
+        TEST_CYCLE() cv::HoughLinesP(mask, cpu_lines, rho, theta, threshold, minLineLength, maxLineGap);
 
         SANITY_CHECK(cpu_lines);
     }
@@ -1831,6 +1831,8 @@ PERF_TEST_P(Sz_Dp_MinDist, ImgProc_HoughCircles,
 
 //////////////////////////////////////////////////////////////////////
 // GeneralizedHough
+
+#if !defined(__GNUC__) || (__GNUC__ * 10 + __GNUC_MINOR__ != 47)
 
 CV_FLAGS(GHMethod, GHT_POSITION, GHT_SCALE, GHT_ROTATION)
 
@@ -1918,3 +1920,5 @@ PERF_TEST_P(Method_Sz, DISABLED_ImgProc_GeneralizedHough,
         CPU_SANITY_CHECK(positions);
     }
 }
+
+#endif
