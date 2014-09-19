@@ -1716,6 +1716,7 @@ public:
     virtual bool setProperty(int, double);
     virtual bool grabFrame();
     virtual IplImage* retrieveFrame(int);
+    virtual int dev_fd(void) {return captureV4L?captureV4L->deviceHandle: -1; };
 protected:
 
     CvCaptureCAM_V4L* captureV4L;
@@ -1755,6 +1756,13 @@ double CvCaptureCAM_V4L_CPP::getProperty( int propId )
 bool CvCaptureCAM_V4L_CPP::setProperty( int propId, double value )
 {
     return captureV4L ? icvSetPropertyCAM_V4L( captureV4L, propId, value ) != 0 : false;
+}
+
+//return the cam device fd after opening /dev/video0
+int cvGetCamFD(CvCapture* cap)
+{
+	CvCaptureCAM_V4L_CPP* capture = (CvCaptureCAM_V4L_CPP*)cap;
+	return capture ? capture->dev_fd(): -1;
 }
 
 CvCapture* cvCreateCameraCapture_V4L( int index )

@@ -569,6 +569,16 @@ double VideoCapture::get(int propId)
     return cvGetCaptureProperty(cap, propId);
 }
 
+//Get the cam device fd after opening "/dev/video0 to /dev/videoNN".
+int VideoCapture::get_fd(void) 
+{ 
+#if defined HAVE_LIBV4L || defined HAVE_CAMV4L || defined HAVE_CAMV4L2 || defined HAVE_VIDEOIO
+	return isOpened()?cvGetCamFD(cap):-1;
+#else
+	return -1; //TODO TODO
+#endif
+}
+
 VideoWriter::VideoWriter()
 {}
 

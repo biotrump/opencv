@@ -66,6 +66,12 @@ public class VideoCapture {
         return retVal;
     }
 
+	//TODO
+    public int get_fd()
+    {
+        return -1;
+    }
+    
     public List<Size> getSupportedPreviewSizes()
     {
         String[] sizes_str = n_getSupportedPreviewSizes(nativeObj).split(",");

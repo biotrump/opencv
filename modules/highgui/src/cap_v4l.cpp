@@ -2901,6 +2901,13 @@ bool CvCaptureCAM_V4L_CPP::setProperty( int propId, double value )
     return captureV4L ? icvSetPropertyCAM_V4L( captureV4L, propId, value ) != 0 : false;
 }
 
+//return the cam device fd after opening /dev/video0
+int cvGetCamFD(CvCapture* cap)
+{
+	CvCaptureCAM_V4L_CPP* capture = (CvCaptureCAM_V4L_CPP*)cap;
+	return capture ? capture->dev_fd(): -1;
+}
+
 CvCapture* cvCreateCameraCapture_V4L( int index )
 {
     CvCaptureCAM_V4L_CPP* capture = new CvCaptureCAM_V4L_CPP;
