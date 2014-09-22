@@ -479,6 +479,22 @@ CV_IMPL void cvReleaseVideoWriter( CvVideoWriter** pwriter )
     }
 }
 
+
+/**
+ * Camera dispatching method: index is the camera number.
+ * If given an index from 0 to 99, it tries to find the first
+ * API that can access a given camera index.
+ * Add multiples of 100 to select an API.
+ */
+CV_IMPL int cvGetCamFD (CvCapture *cap)
+{
+#if defined HAVE_LIBV4L || defined HAVE_CAMV4L || defined HAVE_CAMV4L2 || defined HAVE_VIDEOIO
+	return cvGetCamFD_V4L(cap);
+#else
+	return -1; //TODO
+#endif
+}
+
 namespace cv
 {
 
@@ -573,7 +589,7 @@ double VideoCapture::get(int propId)
 int VideoCapture::get_fd(void) 
 { 
 #if defined HAVE_LIBV4L || defined HAVE_CAMV4L || defined HAVE_CAMV4L2 || defined HAVE_VIDEOIO
-	return isOpened()?cvGetCamFD(cap):-1;
+	return isOpened()?cvGetCamFD_V4L(cap):-1;
 #else
 	return -1; //TODO TODO
 #endif

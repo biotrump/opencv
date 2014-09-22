@@ -319,6 +319,7 @@ enum
 
 /* start capturing frames from camera: index = camera_index + domain_offset (CV_CAP_*) */
 CVAPI(CvCapture*) cvCreateCameraCapture( int index );
+CVAPI(int) cvGetCamFD (CvCapture *cap);
 
 /* grab a frame, return 1 on success, 0 on fail.
   this function is thought to be fast               */

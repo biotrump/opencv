@@ -1759,7 +1759,7 @@ bool CvCaptureCAM_V4L_CPP::setProperty( int propId, double value )
 }
 
 //return the cam device fd after opening /dev/video0
-int cvGetCamFD(CvCapture* cap)
+int cvGetCamFD_V4L(CvCapture* cap)
 {
 	CvCaptureCAM_V4L_CPP* capture = (CvCaptureCAM_V4L_CPP*)cap;
 	return capture ? capture->dev_fd(): -1;
