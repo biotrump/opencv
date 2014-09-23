@@ -2860,6 +2860,7 @@ public:
     virtual bool setProperty(int, double);
     virtual bool grabFrame();
     virtual IplImage* retrieveFrame(int);
+    virtual int dev_fd(void) {return captureV4L?captureV4L->deviceHandle: -1; };
 protected:
 
     CvCaptureCAM_V4L* captureV4L;
