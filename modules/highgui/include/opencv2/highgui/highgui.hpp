@@ -221,7 +221,7 @@ public:
 
     CV_WRAP virtual bool set(int propId, double value);
     CV_WRAP virtual double get(int propId);
-	CV_WRAP virtual int get_fd(void);
+    CV_WRAP virtual int get_fd();
 protected:
     Ptr<CvCapture> cap;
 };
