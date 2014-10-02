@@ -586,7 +586,7 @@ double VideoCapture::get(int propId)
 }
 
 //Get the cam device fd after opening "/dev/video0 to /dev/videoNN".
-int VideoCapture::get_fd(void) 
+CV_IMPL int VideoCapture::get_fd() 
 { 
 #if defined HAVE_LIBV4L || defined HAVE_CAMV4L || defined HAVE_CAMV4L2 || defined HAVE_VIDEOIO
 	return isOpened()?cvGetCamFD_V4L(cap):-1;
