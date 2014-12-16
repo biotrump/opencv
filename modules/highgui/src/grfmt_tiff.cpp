@@ -51,6 +51,9 @@
 #include "grfmt_tiff.hpp"
 
 #ifdef HAVE_TIFF
+// these defines are used to resolve conflict between tiff.h and opencv2/core/types_c.h
+#define uint64 uint64_hack_
+#define int64 int64_hack_
 # include "tiff.h"
 # include "tiffio.h"
 #endif
