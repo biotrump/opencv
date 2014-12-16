@@ -10,6 +10,12 @@ else()
 endif()
 
 ocv_add_module(world opencv_core)
+if(ENABLE_DYNAMIC_CUDA)
+  add_definitions(-DDYNAMIC_CUDA_SUPPORT)
+  ocv_define_module(opencv_core EXCLUDE_CUDA opencv_imgproc opencv_features2d opencv_calib3d OPTIONAL opencv_ocl)
+else()
+  ocv_define_module(opencv_core opencv_imgproc opencv_features2d opencv_calib3d OPTIONAL opencv_gpu opencv_ocl)
+endif()
 
 if(MSVC)
   foreach(_var CMAKE_EXE_LINKER_FLAGS_RELEASE CMAKE_MODULE_LINKER_FLAGS_RELEASE CMAKE_SHARED_LINKER_FLAGS_RELEASE
