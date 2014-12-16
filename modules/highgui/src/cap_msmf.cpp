@@ -72,13 +72,17 @@
 #include <stdarg.h>
 #include <string.h>
 
+#ifdef _MSC_VER
 #pragma warning(disable:4503)
 #pragma comment(lib, "mfplat")
 #pragma comment(lib, "mf")
 #pragma comment(lib, "mfuuid")
 #pragma comment(lib, "Strmiids")
 #pragma comment(lib, "Mfreadwrite")
+#if (WINVER >= 0x0602) // Available since Win 8
 #pragma comment(lib, "MinCore_Downlevel")
+#endif
+#endif
 
 #include <mferror.h>
 
@@ -258,7 +262,7 @@ public:
 #include "ppltasks_winrt.h"
 #endif
 #else
-#include <atlbase.h>
+#include <comdef.h>
 #endif
 
 struct IMFMediaType;
@@ -1460,7 +1464,6 @@ void ImageGrabber::stopGrabbing()
 
 HRESULT ImageGrabber::startGrabbing(void)
 {
-    _ComPtr<IMFMediaEvent> pEvent = NULL;
     PROPVARIANT var;
     PropVariantInit(&var);
     HRESULT hr = ig_pSession->SetTopology(0, ig_pTopology);
@@ -1468,6 +1471,7 @@ HRESULT ImageGrabber::startGrabbing(void)
     hr = ig_pSession->Start(&GUID_NULL, &var);
     for(;;)
     {
+        _ComPtr<IMFMediaEvent> pEvent = NULL;
         HRESULT hrStatus = S_OK;
         MediaEventType met;
         if(!ig_pSession) break;
@@ -1500,11 +1504,13 @@ HRESULT ImageGrabber::startGrabbing(void)
             DebugPrintOut(L"IMAGEGRABBER VIDEODEVICE %i: MESessionStopped \n", ig_DeviceID);
             break;
         }
+#if (WINVER >= 0x0602) // Available since Win 8
         if (met == MEVideoCaptureDeviceRemoved)
         {
             DebugPrintOut(L"IMAGEGRABBER VIDEODEVICE %i: MEVideoCaptureDeviceRemoved \n", ig_DeviceID);
             break;
         }
+#endif
         if ((met == MEError) || (met == MENonFatalError))
         {
             pEvent->GetStatus(&hrStatus);
@@ -2441,10 +2447,11 @@ int videoDevice::findType(unsigned int size, unsigned int frameRate)
     fmt = vd_CaptureFormats.find(size);
     if( fmt != vd_CaptureFormats.end() )
         FRM = fmt->second;
-    else if (FRM.empty())
-        return -1;
-    else
+    else if(!vd_CaptureFormats.empty())
         FRM = vd_CaptureFormats.rbegin()->second;
+
+    if (FRM.empty())
+        return -1;
 
     UINT64 frameRateMax = 0;  SUBTYPEMap STMMax;
     if(frameRate == 0)
@@ -3842,17 +3849,24 @@ bool CvCaptureFile_MSMF::open(const char* filename)
         hr = enumerateCaptureFormats(videoFileSource);
     }
 
-    if (SUCCEEDED(hr))
+    if( captureFormats.empty() )
     {
-        hr = ImageGrabberThread::CreateInstance(&grabberThread, videoFileSource, (unsigned int)-2, true);
+        isOpened = false;
+    }
+    else
+    {
+        if (SUCCEEDED(hr))
+        {
+            hr = ImageGrabberThread::CreateInstance(&grabberThread, videoFileSource, (unsigned int)-2, true);
+        }
+
+        isOpened = SUCCEEDED(hr);
     }
 
-    if (SUCCEEDED(hr))
+    if (isOpened)
     {
         grabberThread->start();
     }
-
-    isOpened = SUCCEEDED(hr);
 
     return isOpened;
 }
@@ -3985,7 +3999,9 @@ HRESULT CvCaptureFile_MSMF::enumerateCaptureFormats(IMFMediaSource *pSource)
             goto done;
         }
         MediaType MT = FormatReader::Read(pType.Get());
-        captureFormats.push_back(MT);
+        // We can capture only RGB video.
+        if( MT.MF_MT_SUBTYPE == MFVideoFormat_RGB24 )
+            captureFormats.push_back(MT);
     }
 
 done:
@@ -4110,7 +4126,7 @@ const GUID CvVideoWriter_MSMF::FourCC2GUID(int fourcc)
             return MFVideoFormat_DVSD; break;
         case CV_FOURCC_MACRO('d', 'v', 's', 'l'):
                 return MFVideoFormat_DVSL; break;
-#if (WINVER >= _WIN32_WINNT_WIN8)
+#if (WINVER >= 0x0602)
         case CV_FOURCC_MACRO('H', '2', '6', '3'):   // Available only for Win 8 target.
                 return MFVideoFormat_H263; break;
 #endif

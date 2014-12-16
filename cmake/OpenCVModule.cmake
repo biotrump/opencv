@@ -617,9 +617,14 @@ macro(ocv_create_module)
 
   ocv_install_target(${the_module} EXPORT OpenCVModules
     RUNTIME DESTINATION ${OPENCV_BIN_INSTALL_PATH} COMPONENT libs
-    LIBRARY DESTINATION ${OPENCV_LIB_INSTALL_PATH} COMPONENT libs
+    LIBRARY DESTINATION ${OPENCV_LIB_INSTALL_PATH} COMPONENT libs NAMELINK_SKIP
     ARCHIVE DESTINATION ${OPENCV_LIB_INSTALL_PATH} COMPONENT dev
     )
+  get_target_property(_target_type ${the_module} TYPE)
+  if("${_target_type}" STREQUAL "SHARED_LIBRARY")
+    install(TARGETS ${the_module}
+      LIBRARY DESTINATION ${OPENCV_LIB_INSTALL_PATH} COMPONENT dev NAMELINK_ONLY)
+  endif()
 
   # only "public" headers need to be installed
   if(OPENCV_MODULE_${the_module}_HEADERS AND ";${OPENCV_MODULES_PUBLIC};" MATCHES ";${the_module};")
@@ -756,6 +761,22 @@ function(ocv_add_perf_tests)
 
       ocv_add_precompiled_headers(${the_target})
 
+      if(CMAKE_VERSION VERSION_GREATER "2.8" AND OPENCV_TEST_DATA_PATH)
+        add_test(NAME ${the_target} COMMAND ${the_target} --perf_min_samples=1 --perf_force_samples=1 --perf_verify_sanity)
+
+        get_filename_component(cur_modules_loc "${CMAKE_CURRENT_SOURCE_DIR}/.." ABSOLUTE)
+        get_filename_component(default_modules_loc "${CMAKE_SOURCE_DIR}/modules" ABSOLUTE)
+        if("${cur_modules_loc}" STREQUAL "${default_modules_loc}")
+          set(test_category "Public")
+        else()
+          set(test_category "Extra")
+        endif()
+
+        set_tests_properties(${the_target} PROPERTIES
+          LABELS "${test_category};Sanity"
+          ENVIRONMENT "OPENCV_TEST_DATA_PATH=${OPENCV_TEST_DATA_PATH}")
+      endif()
+
     else(OCV_DEPENDENCIES_FOUND)
       # TODO: warn about unsatisfied dependencies
     endif(OCV_DEPENDENCIES_FOUND)
@@ -807,11 +828,24 @@ function(ocv_add_accuracy_tests)
         set_target_properties(${the_target} PROPERTIES FOLDER "tests accuracy")
       endif()
 
-      enable_testing()
-      get_target_property(LOC ${the_target} LOCATION)
-      add_test(${the_target} "${LOC}")
-
       ocv_add_precompiled_headers(${the_target})
+
+      if(CMAKE_VERSION VERSION_GREATER "2.8" AND OPENCV_TEST_DATA_PATH AND NOT "${the_target}" MATCHES "opencv_test_viz")
+        add_test(NAME ${the_target} COMMAND ${the_target})
+
+        get_filename_component(cur_modules_loc "${CMAKE_CURRENT_SOURCE_DIR}/.." ABSOLUTE)
+        get_filename_component(default_modules_loc "${CMAKE_SOURCE_DIR}/modules" ABSOLUTE)
+        if("${cur_modules_loc}" STREQUAL "${default_modules_loc}")
+          set(test_category "Public")
+        else()
+          set(test_category "Extra")
+        endif()
+
+        set_tests_properties(${the_target} PROPERTIES
+          LABELS "${test_category};Accuracy"
+          ENVIRONMENT "OPENCV_TEST_DATA_PATH=${OPENCV_TEST_DATA_PATH}")
+      endif()
+
     else(OCV_DEPENDENCIES_FOUND)
       # TODO: warn about unsatisfied dependencies
     endif(OCV_DEPENDENCIES_FOUND)

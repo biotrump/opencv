@@ -56,7 +56,7 @@
   #define CV_XADD(addr,delta) _InterlockedExchangeAdd(const_cast<void*>(reinterpret_cast<volatile void*>(addr)), delta)
 #elif defined __GNUC__
 
-  #if defined __clang__ && __clang_major__ >= 3 && !defined __ANDROID__ && !defined __EMSCRIPTEN__
+  #if defined __clang__ && __clang_major__ >= 3 && !defined __ANDROID__ && !defined __EMSCRIPTEN__  && !defined(__CUDACC__)
     #ifdef __ATOMIC_SEQ_CST
         #define CV_XADD(addr, delta) __c11_atomic_fetch_add((_Atomic(int)*)(addr), (delta), __ATOMIC_SEQ_CST)
     #else
@@ -365,7 +365,7 @@ template<typename _Tp, int m, int n> inline double Matx<_Tp, m, n>::ddot(const M
 }
 
 
-
+/** @cond IGNORED */
 template<typename _Tp, int m, int n> inline
 Matx<_Tp,m,n> Matx<_Tp,m,n>::diag(const typename Matx<_Tp,m,n>::diag_type& d)
 {
@@ -374,6 +374,7 @@ Matx<_Tp,m,n> Matx<_Tp,m,n>::diag(const typename Matx<_Tp,m,n>::diag_type& d)
         M(i,i) = d(i, 0);
     return M;
 }
+/** @endcond */
 
 template<typename _Tp, int m, int n> inline
 Matx<_Tp,m,n> Matx<_Tp,m,n>::randu(_Tp a, _Tp b)
@@ -3750,8 +3751,15 @@ template<typename _Tp> inline ptrdiff_t operator - (const SeqIterator<_Tp>& a,
                                                     const SeqIterator<_Tp>& b)
 {
     ptrdiff_t delta = a.index - b.index, n = a.seq->total;
+#if defined(__QNX__)
+    // No long std::abs(long) in QNX
+    long absdelta = (delta < 0) ? -delta : delta;
+    if( absdelta > n )
+#else
     if( std::abs(static_cast<long>(delta)) > n )
+#endif
         delta += delta < 0 ? n : -n;
+
     return delta;
 }
 

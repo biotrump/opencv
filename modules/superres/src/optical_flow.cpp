@@ -40,6 +40,20 @@
 //
 //M*/
 
+#if defined(__arm__) && defined(__GNUC__) && (__GNUC__ == 4) && (__GNUC_MINOR__ >= 8)
+// While compiling CV_INIT_ALGORITHM(Farneback_GPU, ...) below, GCC emits a bogus
+// -Warray-bounds warning in GpuMat::~GpuMat. Also, for some reason, suppressing
+// it inside precomp.hpp doesn't work (probably because it's precompiled).
+// Thus, we include this before it's included by precomp.hpp.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Warray-bounds"
+#include "opencv2/core/gpumat.hpp"
+#pragma GCC diagnostic pop
+
+// Even more strangely, this suppression doesn't work when cross-compiling.
+// For that, there's another suppression at the bottom of the file.
+#endif
+
 #include "precomp.hpp"
 
 using namespace std;
@@ -984,4 +998,10 @@ Ptr<DenseOpticalFlowExt> cv::superres::createOptFlow_Farneback_OCL()
     return new FarneBack_OCL;
 }
 
+#endif
+
+// Even though this looks as if it covers nothing, it actually suppress a warning in
+// CV_INIT_ALGORITHM(Farneback_GPU, ...). See the top comment for more explanation.
+#if defined(__arm__) && defined(__GNUC__) && (__GNUC__ == 4) && (__GNUC_MINOR__ >= 8)
+# pragma GCC diagnostic ignored "-Warray-bounds"
 #endif
