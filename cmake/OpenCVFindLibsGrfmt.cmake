@@ -89,20 +89,23 @@ if(WITH_JPEG)
 endif()
 
 # --- libwebp (optional) ---
-
+message(STATUS "> WEBP_LIBRARY:" "${WEBP_LIBRARY}")
 if(WITH_WEBP)
   if(BUILD_WEBP)
     ocv_clear_vars(WEBP_FOUND WEBP_LIBRARY WEBP_LIBRARIES WEBP_INCLUDE_DIR)
+
+    message(STATUS ">#># WEBP_LIBRARY:" "${WEBP_LIBRARY}")
   else()
     include(cmake/OpenCVFindWebP.cmake)
   endif()
 endif()
-
+message(STATUS ">> WEBP_LIBRARY:" "${WEBP_LIBRARY}")
 # --- Add libwebp to 3rdparty/libwebp and compile it if not available ---
 if(WITH_WEBP AND NOT WEBP_FOUND)
 
   set(WEBP_LIBRARY libwebp)
   set(WEBP_LIBRARIES ${WEBP_LIBRARY})
+  message(STATUS ">#># WEBP_LIBRARIES:" "${WEBP_LIBRARIES}")
 
   add_subdirectory("${OpenCV_SOURCE_DIR}/3rdparty/libwebp")
   set(WEBP_INCLUDE_DIR "${${WEBP_LIBRARY}_SOURCE_DIR}")

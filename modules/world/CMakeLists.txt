@@ -27,6 +27,16 @@ endif()
 
 ocv_add_module(world opencv_core)
 
+ocv_clear_vars(GRFMT_LIBS)
+
+message(STATUS "###WEBP_LIBRARIES:" "${WEBP_LIBRARIES}")
+message(STATUS "###WEBP_INCLUDE_DIR:" "${WEBP_INCLUDE_DIR}")
+if(WITH_WEBP)
+  add_definitions(-DHAVE_WEBP)
+  ocv_include_directories(${WEBP_INCLUDE_DIR})
+  list(APPEND GRFMT_LIBS ${WEBP_LIBRARIES})
+endif()
+
 set(headers_list "HEADERS")
 set(sources_list "SOURCES")
 set(link_deps "")
@@ -42,7 +52,8 @@ ocv_module_include_directories()
 
 #message(STATUS "${OPENCV_MODULE_${the_module}_HEADERS}")
 #message(STATUS "${OPENCV_MODULE_${the_module}_SOURCES}")
-ocv_create_module(${link_deps})
+message(STATUS "###GRFMT_LIBS:" "${GRFMT_LIBS}")
+ocv_create_module(${GRFMT_LIBS} ${link_deps})
 
 if(BUILD_opencv_imgcodecs AND OPENCV_MODULE_opencv_imgcodecs_IS_PART_OF_WORLD)
   ocv_imgcodecs_configure_target()
