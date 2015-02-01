@@ -271,7 +271,8 @@ enum InterpolationFlags{
     WARP_INVERSE_MAP     = 16
 };
 
-enum { INTER_BITS      = 5,
+enum InterpolationMasks {
+       INTER_BITS      = 5,
        INTER_BITS2     = INTER_BITS * 2,
        INTER_TAB_SIZE  = 1 << INTER_BITS,
        INTER_TAB_SIZE2 = INTER_TAB_SIZE * INTER_TAB_SIZE
@@ -329,7 +330,8 @@ enum AdaptiveThresholdTypes {
 };
 
 //! cv::undistort mode
-enum { PROJ_SPHERICAL_ORTHO  = 0,
+enum UndistortTypes {
+       PROJ_SPHERICAL_ORTHO  = 0,
        PROJ_SPHERICAL_EQRECT = 1
      };
 
@@ -983,8 +985,8 @@ public:
 
     @param _image A grayscale (CV_8UC1) input image. If only a roi needs to be selected, use:
     `lsd_ptr-\>detect(image(roi), lines, ...); lines += Scalar(roi.x, roi.y, roi.x, roi.y);`
-    @param _lines A vector of Vec4i elements specifying the beginning and ending point of a line. Where
-    Vec4i is (x1, y1, x2, y2), point 1 is the start, point 2 - end. Returned lines are strictly
+    @param _lines A vector of Vec4i or Vec4f elements specifying the beginning and ending point of a line. Where
+    Vec4i/Vec4f is (x1, y1, x2, y2), point 1 is the start, point 2 - end. Returned lines are strictly
     oriented depending on the gradient.
     @param width Vector of widths of the regions, where the lines are found. E.g. Width of line.
     @param prec Vector of precisions with which the lines are found.
@@ -3330,9 +3332,11 @@ data type.
 @param result Map of comparison results. It must be single-channel 32-bit floating-point. If image
 is \f$W \times H\f$ and templ is \f$w \times h\f$ , then result is \f$(W-w+1) \times (H-h+1)\f$ .
 @param method Parameter specifying the comparison method, see cv::TemplateMatchModes
+@param mask Mask of searched template. It must have the same datatype and size with templ. It is
+not set by default.
  */
 CV_EXPORTS_W void matchTemplate( InputArray image, InputArray templ,
-                                 OutputArray result, int method );
+                                 OutputArray result, int method, InputArray mask = noArray() );
 
 //! @}
 
@@ -4216,5 +4220,9 @@ Point LineIterator::pos() const
 //! @} imgproc
 
 } // cv
+
+#ifndef DISABLE_OPENCV_24_COMPATIBILITY
+#include "opencv2/imgproc/imgproc_c.h"
+#endif
 
 #endif
