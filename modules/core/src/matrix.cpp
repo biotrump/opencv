@@ -205,9 +205,12 @@ public:
 
     void deallocate(UMatData* u) const
     {
+        if(!u)
+            return;
+
         CV_Assert(u->urefcount >= 0);
         CV_Assert(u->refcount >= 0);
-        if(u && u->refcount == 0)
+        if(u->refcount == 0)
         {
             if( !(u->flags & UMatData::USER_ALLOCATED) )
             {
@@ -1110,7 +1113,7 @@ void scalarToRawData(const Scalar& s, void* _buf, int type, int unroll_to)
                                         Input/Output Array
 \*************************************************************************************************/
 
-Mat _InputArray::getMat(int i) const
+Mat _InputArray::getMat_(int i) const
 {
     int k = kind();
     int accessFlags = flags & ACCESS_MASK;

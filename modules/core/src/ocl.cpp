@@ -64,7 +64,15 @@
 // TODO Move to some common place
 static bool getBoolParameter(const char* name, bool defaultValue)
 {
+/*
+ * If your system doesn't support getenv(), define NO_GETENV to disable
+ * this feature.
+ */
+#ifdef NO_GETENV
+    const char* envValue = NULL;
+#else
     const char* envValue = getenv(name);
+#endif
     if (envValue == NULL)
     {
         return defaultValue;
@@ -85,7 +93,7 @@ static bool getBoolParameter(const char* name, bool defaultValue)
 // TODO Move to some common place
 static size_t getConfigurationParameterForSize(const char* name, size_t defaultValue)
 {
-#ifdef HAVE_WINRT
+#ifdef NO_GETENV
     const char* envValue = NULL;
 #else
     const char* envValue = getenv(name);
@@ -728,7 +736,7 @@ static void* initOpenCLAndLoad(const char* funcname)
     static HMODULE handle = 0;
     if (!handle)
     {
-#ifndef HAVE_WINRT
+#ifndef WINRT
         if(!initialized)
         {
             handle = LoadLibraryA("OpenCL.dll");
@@ -1471,7 +1479,7 @@ bool haveOpenCL()
 
 bool useOpenCL()
 {
-    CoreTLSData* data = coreTlsData.get();
+    CoreTLSData* data = getCoreTlsData().get();
     if( data->useOpenCL < 0 )
     {
         try
@@ -1490,7 +1498,7 @@ void setUseOpenCL(bool flag)
 {
     if( haveOpenCL() )
     {
-        CoreTLSData* data = coreTlsData.get();
+        CoreTLSData* data = getCoreTlsData().get();
         data->useOpenCL = (flag && Device::getDefault().ptr() != NULL) ? 1 : 0;
     }
 }
@@ -2161,7 +2169,7 @@ size_t Device::profilingTimerResolution() const
 const Device& Device::getDefault()
 {
     const Context& ctx = Context::getDefault();
-    int idx = coreTlsData.get()->device;
+    int idx = getCoreTlsData().get()->device;
     const Device& device = ctx.device(idx);
     return device;
 }
@@ -2231,7 +2239,7 @@ static bool parseOpenCLDeviceConfiguration(const std::string& configurationStr,
     return true;
 }
 
-#ifdef HAVE_WINRT
+#ifdef WINRT
 static cl_device_id selectOpenCLDevice()
 {
     return NULL;
@@ -3040,7 +3048,7 @@ void* Queue::ptr() const
 
 Queue& Queue::getDefault()
 {
-    Queue& q = coreTlsData.get()->oclQueue;
+    Queue& q = getCoreTlsData().get()->oclQueue;
     if( !q.p && haveOpenCL() )
         q.create(Context::getDefault());
     return q;
@@ -3949,6 +3957,7 @@ public:
             derived()._releaseBufferEntry(entry);
         }
         reservedEntries_.clear();
+        currentReservedSize = 0;
     }
 };
 

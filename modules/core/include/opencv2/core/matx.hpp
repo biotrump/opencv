@@ -427,7 +427,7 @@ template<typename _Tp, int m> struct Matx_DetOp
     double operator ()(const Matx<_Tp, m, m>& a) const
     {
         Matx<_Tp, m, m> temp = a;
-        double p = LU(temp.val, m*sizeof(_Tp), m, 0, 0, 0);
+        double p = hal::LU(temp.val, m*sizeof(_Tp), m, 0, 0, 0);
         if( p == 0 )
             return p;
         for( int i = 0; i < m; i++ )
@@ -817,7 +817,7 @@ Vec<_Tp, n> Matx<_Tp, m, n>::solve(const Vec<_Tp, m>& rhs, int method) const
 template<typename _Tp, int m> static inline
 double determinant(const Matx<_Tp, m, m>& a)
 {
-    return internal::Matx_DetOp<_Tp, m>()(a);
+    return cv::internal::Matx_DetOp<_Tp, m>()(a);
 }
 
 template<typename _Tp, int m, int n> static inline
@@ -960,25 +960,25 @@ Vec<_Tp, cn> Vec<_Tp, cn>::mul(const Vec<_Tp, cn>& v) const
 template<> inline
 Vec<float, 2> Vec<float, 2>::conj() const
 {
-    return internal::conjugate(*this);
+    return cv::internal::conjugate(*this);
 }
 
 template<> inline
 Vec<double, 2> Vec<double, 2>::conj() const
 {
-    return internal::conjugate(*this);
+    return cv::internal::conjugate(*this);
 }
 
 template<> inline
 Vec<float, 4> Vec<float, 4>::conj() const
 {
-    return internal::conjugate(*this);
+    return cv::internal::conjugate(*this);
 }
 
 template<> inline
 Vec<double, 4> Vec<double, 4>::conj() const
 {
-    return internal::conjugate(*this);
+    return cv::internal::conjugate(*this);
 }
 
 template<typename _Tp, int cn> inline
