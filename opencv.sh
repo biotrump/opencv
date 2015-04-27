@@ -1,8 +1,18 @@
 #!/bin/bash
 #. setup.sh
+
+if [ -z "$CMAKE_BUILD_TYPE" ]; then
+#default is release build
+	CMAKE_BUILD_TYPE="Release"
+fi
 #export CMAKE_BUILD_TYPE "Debug"
-export CMAKE_BUILD_TYPE="Release"
-set OPENCV_BUILD_SHARED_LIBS=0
+#export CMAKE_BUILD_TYPE="Release"
+export CMAKE_BUILD_TYPE
+
+if [ -z "$OPENCV_BUILD_SHARED_LIBS" -o  "$OPENCV_BUILD_SHARED_LIBS" != '1'  ]; then
+#default is static build
+	OPENCV_BUILD_SHARED_LIBS="0"
+fi
 
 echo opencv.sh
 
@@ -16,15 +26,29 @@ echo opencv.sh
 #  mkdir ${BIOTRUMP_OUT}/openCV
 #fi
 export OPENCV_SRC=`pwd`
-export OPENCV_OUT=${OPENCV_SRC}/build/2.4.x-static
+if [ "$OPENCV_BUILD_SHARED_LIBS" == "0" ];then
+	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/2.4.x-static
+	echo static
+else
+	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/2.4.x-shared
+	echo shared
+fi
 
+if [ ! -d ${OPENCV_SRC}/build ];then
+	mkdir ${OPENCV_SRC}/build
+fi
+if [ ! -d ${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE} ];then
+	mkdir ${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}
+fi
 if [ -d ${OPENCV_OUT} ]; then
 	rm -rf ${OPENCV_OUT}/*
 else
-  echo "${OPENCV_OUT} does not exis. mkdir"
-  mkdir ${OPENCV_OUT}
+	echo "${OPENCV_OUT} does not exis. mkdir"
+	mkdir ${OPENCV_OUT}
 fi
+
 pushd ${OPENCV_OUT}
+
 #read
 #echo "*********$@"
 
