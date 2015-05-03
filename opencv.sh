@@ -9,7 +9,12 @@ fi
 #export CMAKE_BUILD_TYPE="Release"
 export CMAKE_BUILD_TYPE
 
-if [ -z "$OPENCV_BUILD_SHARED_LIBS" -o  "$OPENCV_BUILD_SHARED_LIBS" != '1'  ]; then
+if [ -z "$OPENCV_BRANCH" ]; then
+	export OPENCV_BRANCH=2.4.x
+fi
+
+if [ -z "$OPENCV_BUILD_SHARED_LIBS" -o  \
+"$OPENCV_BUILD_SHARED_LIBS" != '1'  ]; then
 #default is static build
 	OPENCV_BUILD_SHARED_LIBS="0"
 fi
@@ -26,20 +31,24 @@ echo opencv.sh
 #  mkdir ${BIOTRUMP_OUT}/openCV
 #fi
 export OPENCV_SRC=`pwd`
-if [ "$OPENCV_BUILD_SHARED_LIBS" == "0" ];then
-	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/2.4.x-static
+if [ -z "$OPENCV_OUT"]; then
+ if [ "$OPENCV_BUILD_SHARED_LIBS" == "0" ];then
+	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/${OPENCV_BRANCH}-static
 	echo static
-else
-	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/2.4.x-shared
+ else
+	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/${OPENCV_BRANCH}-shared
 	echo shared
+ fi
+
+	if [ ! -d ${OPENCV_SRC}/build ];then
+		mkdir ${OPENCV_SRC}/build
+	fi
+
+	if [ ! -d ${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE} ];then
+		mkdir ${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}
+	fi
 fi
 
-if [ ! -d ${OPENCV_SRC}/build ];then
-	mkdir ${OPENCV_SRC}/build
-fi
-if [ ! -d ${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE} ];then
-	mkdir ${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}
-fi
 if [ -d ${OPENCV_OUT} ]; then
 	rm -rf ${OPENCV_OUT}/*
 else
