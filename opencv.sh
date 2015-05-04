@@ -30,15 +30,19 @@ echo opencv.sh
 #  echo "${BIOTRUMP_OUT}/openCV does not exist. mkdir"
 #  mkdir ${BIOTRUMP_OUT}/openCV
 #fi
-export OPENCV_SRC=`pwd`
-if [ -z "$OPENCV_OUT"]; then
- if [ "$OPENCV_BUILD_SHARED_LIBS" == "0" ];then
+
+if [ -z "$OPENCV_SRC" ]; then
+	export OPENCV_SRC=`pwd`
+fi
+
+if [ -z "$OPENCV_OUT" ]; then
+	if [ "$OPENCV_BUILD_SHARED_LIBS" == "0" ];then
 	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/${OPENCV_BRANCH}-static
 	echo static
- else
+	else
 	export OPENCV_OUT=${OPENCV_SRC}/build/${CMAKE_BUILD_TYPE}/${OPENCV_BRANCH}-shared
 	echo shared
- fi
+	fi
 
 	if [ ! -d ${OPENCV_SRC}/build ];then
 		mkdir ${OPENCV_SRC}/build
@@ -49,11 +53,10 @@ if [ -z "$OPENCV_OUT"]; then
 	fi
 fi
 
-if [ -d ${OPENCV_OUT} ]; then
-	rm -rf ${OPENCV_OUT}/*
+if [ ! -d ${OPENCV_OUT} ]; then
+	mkdir -p $OPENCV_OUT
 else
-	echo "${OPENCV_OUT} does not exis. mkdir"
-	mkdir ${OPENCV_OUT}
+	rm -rf ${OPENCV_OUT}/*
 fi
 
 pushd ${OPENCV_OUT}
@@ -75,5 +78,7 @@ cmake -DBUILD_EXAMPLES:BOOL="1" -DBUILD_OPENEXR:BOOL="1" -DBUILD_SHARED_LIBS:BOO
 -DWITH_OPENGL:BOOL="1" -DBUILD_PNG:BOOL="1" \
 -DWITH_OPENCL:BOOL="1" -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} \
 ${OPENCV_SRC}
+
 time make $@
+
 popd
