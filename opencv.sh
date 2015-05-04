@@ -55,8 +55,8 @@ fi
 
 if [ ! -d ${OPENCV_OUT} ]; then
 	mkdir -p $OPENCV_OUT
-else
-	rm -rf ${OPENCV_OUT}/*
+#else
+#	rm -rf ${OPENCV_OUT}/*
 fi
 
 pushd ${OPENCV_OUT}
